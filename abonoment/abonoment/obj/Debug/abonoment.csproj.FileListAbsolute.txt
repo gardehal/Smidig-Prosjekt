@@ -1,0 +1,7 @@
+C:\Users\robin\source\repos\abonoment\abonoment\obj\Debug\abonoment.csprojResolveAssemblyReference.cache
+C:\Users\robin\source\repos\abonoment\abonoment\obj\Debug\abonoment.csproj.CoreCompileInputs.cache
+C:\Users\robin\source\repos\abonoment\abonoment\bin\Debug\abonoment.exe.config
+C:\Users\robin\source\repos\abonoment\abonoment\bin\Debug\abonoment.exe
+C:\Users\robin\source\repos\abonoment\abonoment\bin\Debug\abonoment.pdb
+C:\Users\robin\source\repos\abonoment\abonoment\obj\Debug\abonoment.exe
+C:\Users\robin\source\repos\abonoment\abonoment\obj\Debug\abonoment.pdb
