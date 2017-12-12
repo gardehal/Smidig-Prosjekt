@@ -5,3 +5,6 @@ C:\Users\robin\source\repos\abonoment\abonoment\bin\Debug\abonoment.exe
 C:\Users\robin\source\repos\abonoment\abonoment\bin\Debug\abonoment.pdb
 C:\Users\robin\source\repos\abonoment\abonoment\obj\Debug\abonoment.exe
 C:\Users\robin\source\repos\abonoment\abonoment\obj\Debug\abonoment.pdb
+C:\Users\Alex\Desktop\Smidig Projekt\Smidig-Prosjekt\abonoment\abonoment\bin\Debug\abonoment.exe.config
+C:\Users\Alex\Desktop\Smidig Projekt\Smidig-Prosjekt\abonoment\abonoment\obj\Debug\abonoment.exe
+C:\Users\Alex\Desktop\Smidig Projekt\Smidig-Prosjekt\abonoment\abonoment\obj\Debug\abonoment.pdb
