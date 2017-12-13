@@ -15,6 +15,7 @@ namespace abonoment
             // Create the connection to the resource!
             // This is the connection, that is established and
             // will be available throughout this block.
+            Console.WriteLine("bai");
             String connectionString = "Server=[localhost:3306];Database=[linrob16_kolonial];Trusted_Connection=true";
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
