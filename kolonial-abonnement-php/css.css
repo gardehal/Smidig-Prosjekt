@@ -1,3 +1,5 @@
+/*----- Containere Start ------*/
+
 #container
 {
     top: 0;
@@ -15,6 +17,8 @@
     height: 60%;
 }
 
+/*----- Containere End ------*/
+
 /*----- Card Start -----*/
 
 #card
@@ -31,9 +35,9 @@
 
 #select
 {
+    position: absolute;
     top: 10px;
     right: 0;
-    position: absolute;
 }
 
 #leveringsdato
@@ -44,6 +48,41 @@
 #intervall
 {
     width: 35px;
+}
+
+#dropdown-order
+{
+    position: relative;
+    right: 110px;
+    top: 10px;
+}
+
+#dropdown-content
+{
+    position: absolute;
+    top: 25;
+    left: 0;
+    height: 100px;
+    width: 90px;
+    display: none;
+    z-index: 1;
+    background-color: orange;
+}
+
+#dropdown-btn
+{
+    position: relative;
+}
+
+#update-list-btn
+{
+    
+}
+
+#buy-list-btn
+{
+    position: relative;
+    top: -12px;
 }
 
 /*----- Card End -----*/
