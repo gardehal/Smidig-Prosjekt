@@ -12,16 +12,16 @@
             <!--- Dropdown tid --->
             <select name="leveringstid">
                 <!-- TODO: enum eller selected shit = shit --->
-                <option value="<?= $event['leverings_tidspunkt'] ?>" disabled selected><?= $event['leverings_tidspunkt'] ?></option>
-                <option value="1">07-09</option>
-                <option value="2">08-10</option>
-                <option value="3">08-11</option>
-                <option value="4">09-10</option>
-                <option value="5">09-11</option>
-                <option value="6">09-12</option>
-                <option value="7">09-14</option>
-                <option value="8">14-16</option>
-                <option value="9">16-19</option>
+                <option value="<?= $event['leverings_tidspunkt'] ?>" selected><?= $event['leverings_tidspunkt'] ?></option>
+                <option value="07-09">07-09</option>
+                <option value="08-10">08-10</option>
+                <option value="08-11">08-11</option>
+                <option value="09-10">09-10</option>
+                <option value="09-11">09-11</option>
+                <option value="09-12">09-12</option>
+                <option value="09-14">09-14</option>
+                <option value="14-16">14-16</option>
+                <option value="16-19">16-19</option>
             </select>
 
             <!--- Intervall --->
