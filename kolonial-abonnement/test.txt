@@ -1,5 +1,0 @@
-<?php
-    //require 'connection.php';
-    //$statement = $connection->prepare('SELECT * FROM abonoment');
-    //require 'connection-footer.php';
-?>

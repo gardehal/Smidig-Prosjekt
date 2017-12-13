@@ -1,6 +1,6 @@
 <?php
     require 'connection.php';
-    $statement1 = $connection->prepare('SELECT * FROM abonoment');
+    $statement1 = $connection->prepare('SELECT * FROM abonnement');
     require 'statement-execute-1.php';
 ?>
 

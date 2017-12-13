@@ -4,7 +4,7 @@ $kundeid = $_POST['edit_kunde_id'];
 $listeid = $_POST['edit_liste_id'];
 
         //todo_id, todo_check, todo_todo
-        $statement1 = $connection->prepare('UPDATE abonoment SET
+        $statement1 = $connection->prepare('UPDATE abonnement SET
         leverings_tidspunkt = "'.$_POST['leveringstid'].'", 
         leverings_dato = "'.$_POST['leveringsdato'].'", 
         intervall = "'.$_POST['intervall'].'"
