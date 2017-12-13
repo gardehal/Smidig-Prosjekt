@@ -12,7 +12,7 @@
             <div id="dropdown-order">
                 <button type="button" id="dropdown-btn" onclick="toggleDropdown()">Endre levering</button>
                 
-                <div id="dropdown-content">
+                <div class="dropdown-content">
                     <!--- Dropdown tid --->
                     <select name="leveringstid">
                         <option value="<?= $event['leverings_tidspunkt'] ?>" selected><?= $event['leverings_tidspunkt'] ?></option>
@@ -49,16 +49,16 @@
 </div>
 
 <script>
-    function toggleDropdown()
+    function toggleDropdown() //ser ikke ut til å reagere på riktig element, ID burde ikke virke, men kanskje class gjør. Elementer utenfra som contentcounter (se index.php) henter bare det siste elementet. Prøve array?
         {
-            var x = document.getElementById("dropdown-content");
-            if (x.style.display === "block") 
+            var x = document.getElementsByClassName("dropdown-content");
+            if (x[0].style.display === "block") 
             {
-                x.style.display = "none";
+                x[0].style.display = "none";
             } 
             else 
             {
-                x.style.display = "block";
+                x[0].style.display = "block";
             }
         }
 </script>

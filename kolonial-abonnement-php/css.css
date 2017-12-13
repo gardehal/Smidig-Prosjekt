@@ -38,23 +38,19 @@
     position: absolute;
     top: 10px;
     right: 0;
+    width: 200px;
 }
 
-#leveringsdato
+#intervall, #leveringstid, #leveringsdato
 {
     width: 135px;
-}
-
-#intervall
-{
-    width: 35px;
 }
 
 #dropdown-order
 {
     position: relative;
-    right: 110px;
-    top: 10px;
+    left: 0;
+    top: 5px;
 }
 
 #dropdown-content
@@ -64,7 +60,7 @@
     left: 0;
     height: 100px;
     width: 90px;
-    display: none;
+    display: block;
     z-index: 1;
     background-color: orange;
 }
@@ -81,8 +77,9 @@
 
 #buy-list-btn
 {
-    position: relative;
-    top: -12px;
+    position: absolute;
+    top: 5px;
+    right: 0;
 }
 
 /*----- Card End -----*/
