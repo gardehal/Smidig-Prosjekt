@@ -17,7 +17,11 @@ namespace abonoment
             // This is the connection, that is established and
             // will be available throughout this block.
             Console.WriteLine("check");
-            String connectionString = "Server=localhost;Database=abonoment;Uid=root;pwd=mysqlrix3996;Convert Zero Datetime=True";
+            //connection string er den som viser hvilken database ect som man skal connecte til.
+            //local string:
+            //String connectionString = "Server=localhost;Database=abonoment;Uid=root;pwd=mysqlrix3996;Convert Zero Datetime=True";
+            // network string: 
+            String connectionString = "Server=tek.westerdals.no;PORT=3306;Database=garale16_abonnement;Uid=garale16_admin;pwd=GA16AdminPassord;Convert Zero Datetime=True";
             MySqlConnection conn = new MySqlConnection(connectionString);
             MySqlCommand cmd;
             Random rnd = new Random();
@@ -43,13 +47,19 @@ namespace abonoment
 
                 //skal se gjennom de ordrene som er null eller senere en dagens dato, og endre leveringsdatoen til neste levering.
                 DateTime thisDay = DateTime.Today;
+                string today = thisDay.ToString("s");
+                today = today.Substring(0, 10);
                 cmd.CommandText = "SELECT * FROM abonnement WHERE leverings_dato < '" + 
-                    thisDay + "';" ;
+                    today + "';" ;
                 MySqlDataAdapter adap = new MySqlDataAdapter(cmd);
                 DataSet ds = new DataSet();
                 adap.Fill(ds);
                 foreach (DataTable table in ds.Tables)
                 {
+                    foreach (DataColumn column in table.Columns)
+                    {
+                        Console.WriteLine(column.ColumnName);
+                    }
                     // tar for seg hver rad som er hentet ut
                     foreach (DataRow row in table.Rows)
                     {

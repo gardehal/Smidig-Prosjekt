@@ -12,3 +12,10 @@ C:\Users\robin\Documents\GitHub\Smidig-Prosjekt\abonoment\abonoment\bin\Debug\My
 C:\Users\robin\Documents\GitHub\Smidig-Prosjekt\abonoment\abonoment\bin\Debug\MySql.Web.dll
 C:\Users\robin\Documents\GitHub\Smidig-Prosjekt\abonoment\abonoment\bin\Debug\MySql.Data.xml
 C:\Users\robin\Documents\GitHub\Smidig-Prosjekt\abonoment\abonoment\bin\Debug\MySql.Web.xml
+C:\Users\robin\Documents\GitHub\Smidig-Prosjekt\abonoment\abonoment\bin\Debug\abonoment.exe.config
+C:\Users\robin\Documents\GitHub\Smidig-Prosjekt\abonoment\abonoment\bin\Debug\abonoment.exe
+C:\Users\robin\Documents\GitHub\Smidig-Prosjekt\abonoment\abonoment\bin\Debug\abonoment.pdb
+C:\Users\robin\Documents\GitHub\Smidig-Prosjekt\abonoment\abonoment\obj\Debug\abonoment.csprojResolveAssemblyReference.cache
+C:\Users\robin\Documents\GitHub\Smidig-Prosjekt\abonoment\abonoment\obj\Debug\abonoment.csproj.CoreCompileInputs.cache
+C:\Users\robin\Documents\GitHub\Smidig-Prosjekt\abonoment\abonoment\obj\Debug\abonoment.exe
+C:\Users\robin\Documents\GitHub\Smidig-Prosjekt\abonoment\abonoment\obj\Debug\abonoment.pdb
