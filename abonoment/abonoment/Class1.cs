@@ -17,7 +17,7 @@ namespace abonoment
             // This is the connection, that is established and
             // will be available throughout this block.
             Console.WriteLine("check");
-            String connectionString = "Server=localhost;Database=abonoment;Uid=root;pwd=mysqlrix3996;";
+            String connectionString = "Server=localhost;Database=abonoment;Uid=root;pwd=mysqlrix3996;Convert Zero Datetime=True";
             MySqlConnection conn = new MySqlConnection(connectionString);
             MySqlCommand cmd;
             Random rnd = new Random();
@@ -43,32 +43,34 @@ namespace abonoment
 
                 //skal se gjennom de ordrene som er null eller senere en dagens dato, og endre leveringsdatoen til neste levering.
                 DateTime thisDay = DateTime.Today;
-                cmd.CommandText = "SELECT kunde_id, liste_id, bestiling_id, leverings_dato, intervall FROM abonnement WHERE leverings_dato < '" + 
+                cmd.CommandText = "SELECT * FROM abonnement WHERE leverings_dato < '" + 
                     thisDay + "';" ;
                 MySqlDataAdapter adap = new MySqlDataAdapter(cmd);
                 DataSet ds = new DataSet();
                 adap.Fill(ds);
                 foreach (DataTable table in ds.Tables)
                 {
+                    // tar for seg hver rad som er hentet ut
                     foreach (DataRow row in table.Rows)
                     {
+                        //lager ny command slik at ikke @leverings_dato allerede er defined fra før
+                        MySqlCommand newCmd;
+                        newCmd = conn.CreateCommand();
                         DateTime forigeBestilling = (DateTime) row["leverings_dato"];
                         Console.WriteLine("før add: " + forigeBestilling);
                         int intervall =(int) row["intervall"];
                         DateTime nesteBestilling = forigeBestilling.AddDays(intervall*7);
-                        // read column and item
-                        Console.WriteLine("etter add: " + nesteBestilling + "\n");
+                        Console.WriteLine("etter add: " + nesteBestilling);
+                        string dato = nesteBestilling.ToString("s"); //henter datoen ut til riktig format
+                        dato = dato.Substring(0, 10); //tar bort tiden fra datetime uthentingen
+                        Console.WriteLine(dato + "\n");
+                        //her tar man å setter in bestilling til datoen "nesteBestilling"
+                        newCmd.CommandText = "UPDATE abonnement SET leverings_dato = @leverings_dato WHERE kunde_id =" +
+                           row["kunde_id"] + " AND liste_id = " + row["liste_id"] + ";";
+                       newCmd.Parameters.AddWithValue("@leverings_dato", dato);
+                        newCmd.ExecuteNonQuery();
                     }
                 }
-
-                bool finished = false;
-               // while (!finished)
-                {
-                    
-                }
-
-                cmd.ExecuteNonQuery();
-
             }
             catch (Exception)
             {
