@@ -12,7 +12,7 @@
             <div id="dropdown-order">
                 <button type="button" id="dropdown-btn" class="" onclick="toggleDropdown()">Endre levering</button>
                 
-                <div id="dropdown-content">
+                <div id="dropdown-content" style="display:none;"> <!--- display:none virker ikke i CSS... --->
                     <!--- Dropdown tid --->
                     <select name="leveringstid">
                         <option value="<?= $event['leverings_tidspunkt'] ?>" selected><?= $event['leverings_tidspunkt'] ?></option>
