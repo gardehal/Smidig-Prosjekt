@@ -56,10 +56,10 @@ namespace abonoment
                 adap.Fill(ds);
                 foreach (DataTable table in ds.Tables)
                 {
-                    foreach (DataColumn column in table.Columns)
-                    {
-                        Console.WriteLine(column.ColumnName);
-                    }
+                    //foreach (DataColumn column in table.Columns)
+                    //{
+                    //    Console.WriteLine(column.ColumnName);
+                    //}
                     // tar for seg hver rad som er hentet ut
                     foreach (DataRow row in table.Rows)
                     {
