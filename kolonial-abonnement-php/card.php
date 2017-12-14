@@ -3,7 +3,7 @@
         <p>
             Kunde ID: <?= $event['kunde_id'] ?> |
             Liste ID: <?= $event['liste_id'] ?> |
-            Bestillings ID: <?= $event['bestiling_id'] ?>
+            Leveringsdato: <?= $event['leverings_dato'] ?>
         </p>
     </div>
     
