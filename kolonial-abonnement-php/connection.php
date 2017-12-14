@@ -1,5 +1,7 @@
 <?php
 
+//Nettet
+
 //Denne connection-headeren brukes for å koble siden til server og database.
 //Eksempelet viser bruker: garale16_admin, passord: GA16AdminPassord, og databasenavn garale16_westguide. Endre disse tre variablene til ditt brukernavn, passord og databasenavn.
 //OBS: ikke bruk personlig passord, lag nye
