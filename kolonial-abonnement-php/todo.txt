@@ -1,0 +1,5 @@
+TODO:
+- Restriksjoner input (dato, intervall)
+- Bedre CCS rundt dropdown meny?
+- Dynamisk kundeswitch
+- Dropdown meny

@@ -1,7 +1,7 @@
 <?php
     require 'connection.php';
-    $statement1 = $connection->prepare('SELECT * FROM abonnement');
-    require 'statement-execute-1.php';
+    $statement1 = $connection->prepare('SELECT * FROM abonnement WHERE kunde_id = 16'); //statisk kunde
+    require 'statement-execute-1.php'; 
 ?>
 
 <link rel="stylesheet" href="css.css"/>
@@ -13,7 +13,7 @@
             foreach ($events1 as $event) 
             {      
                 require 'card.php';
-                echo "<br>";
+                echo "<br><br><br><br><br><br><br><br><br><br><br>";
                 $contentcounter++;
             }
             if($contentcounter == 0)
