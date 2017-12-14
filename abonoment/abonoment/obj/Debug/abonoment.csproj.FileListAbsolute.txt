@@ -18,3 +18,7 @@ C:\Users\Alex\Desktop\Smidig Projekt\Smidig-Prosjekt\abonoment\abonoment\bin\Deb
 C:\Users\Alex\Desktop\Smidig Projekt\Smidig-Prosjekt\abonoment\abonoment\obj\Debug\abonoment.exe
 C:\Users\Alex\Desktop\Smidig Projekt\Smidig-Prosjekt\abonoment\abonoment\obj\Debug\abonoment.pdb
 >>>>>>> 8934de3ffa93f5e10471369228778c3271c36701
+C:\Users\robin\Documents\GitHub\Smidig-Prosjekt\abonoment\abonoment\bin\Debug\MySql.Data.dll
+C:\Users\robin\Documents\GitHub\Smidig-Prosjekt\abonoment\abonoment\bin\Debug\MySql.Web.dll
+C:\Users\robin\Documents\GitHub\Smidig-Prosjekt\abonoment\abonoment\bin\Debug\MySql.Data.xml
+C:\Users\robin\Documents\GitHub\Smidig-Prosjekt\abonoment\abonoment\bin\Debug\MySql.Web.xml
