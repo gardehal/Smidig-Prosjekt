@@ -5,19 +5,9 @@ C:\Users\robin\source\repos\abonoment\abonoment\bin\Debug\abonoment.exe
 C:\Users\robin\source\repos\abonoment\abonoment\bin\Debug\abonoment.pdb
 C:\Users\robin\source\repos\abonoment\abonoment\obj\Debug\abonoment.exe
 C:\Users\robin\source\repos\abonoment\abonoment\obj\Debug\abonoment.pdb
-<<<<<<< HEAD
-C:\Users\robin\Documents\GitHub\Smidig-Prosjekt\abonoment\abonoment\bin\Debug\abonoment.exe.config
-C:\Users\robin\Documents\GitHub\Smidig-Prosjekt\abonoment\abonoment\bin\Debug\abonoment.exe
-C:\Users\robin\Documents\GitHub\Smidig-Prosjekt\abonoment\abonoment\bin\Debug\abonoment.pdb
-C:\Users\robin\Documents\GitHub\Smidig-Prosjekt\abonoment\abonoment\obj\Debug\abonoment.csprojResolveAssemblyReference.cache
-C:\Users\robin\Documents\GitHub\Smidig-Prosjekt\abonoment\abonoment\obj\Debug\abonoment.csproj.CoreCompileInputs.cache
-C:\Users\robin\Documents\GitHub\Smidig-Prosjekt\abonoment\abonoment\obj\Debug\abonoment.exe
-C:\Users\robin\Documents\GitHub\Smidig-Prosjekt\abonoment\abonoment\obj\Debug\abonoment.pdb
-=======
 C:\Users\Alex\Desktop\Smidig Projekt\Smidig-Prosjekt\abonoment\abonoment\bin\Debug\abonoment.exe.config
 C:\Users\Alex\Desktop\Smidig Projekt\Smidig-Prosjekt\abonoment\abonoment\obj\Debug\abonoment.exe
 C:\Users\Alex\Desktop\Smidig Projekt\Smidig-Prosjekt\abonoment\abonoment\obj\Debug\abonoment.pdb
->>>>>>> 8934de3ffa93f5e10471369228778c3271c36701
 C:\Users\robin\Documents\GitHub\Smidig-Prosjekt\abonoment\abonoment\bin\Debug\MySql.Data.dll
 C:\Users\robin\Documents\GitHub\Smidig-Prosjekt\abonoment\abonoment\bin\Debug\MySql.Web.dll
 C:\Users\robin\Documents\GitHub\Smidig-Prosjekt\abonoment\abonoment\bin\Debug\MySql.Data.xml
