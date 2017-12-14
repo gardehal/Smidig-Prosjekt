@@ -57,13 +57,13 @@ namespace abonoment
                         MySqlCommand newCmd;
                         newCmd = conn.CreateCommand();
                         DateTime forigeBestilling = (DateTime) row["leverings_dato"];
-                        Console.WriteLine("før add: " + forigeBestilling);
+                        //Console.WriteLine("før add: " + forigeBestilling);
                         int intervall =(int) row["intervall"];
                         DateTime nesteBestilling = forigeBestilling.AddDays(intervall*7);
-                        Console.WriteLine("etter add: " + nesteBestilling);
+                        //Console.WriteLine("etter add: " + nesteBestilling);
                         string dato = nesteBestilling.ToString("s"); //henter datoen ut til riktig format
                         dato = dato.Substring(0, 10); //tar bort tiden fra datetime uthentingen
-                        Console.WriteLine(dato + "\n");
+                        //Console.WriteLine(dato + "\n");
                         //her tar man å setter in bestilling til datoen "nesteBestilling"
                         newCmd.CommandText = "UPDATE abonnement SET leverings_dato = @leverings_dato WHERE kunde_id =" +
                            row["kunde_id"] + " AND liste_id = " + row["liste_id"] + ";";
