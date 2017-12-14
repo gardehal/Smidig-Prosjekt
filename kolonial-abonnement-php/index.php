@@ -9,8 +9,10 @@
 <div id="container">
     <div id="content">
         <h1>Abonnement</h1>
-        <input type="button" onclick="location.href='insert-previous-day-list.php';" value="Nytt Abonnement" />
-        <input type="button" onclick="location.href='slett-eksempel.php';" value="Slett Eksempel" />
+        
+        <!--- Verktøy --->
+        <input type="button" onclick="location.href='insert-example.php';" value="Nytt Abonnement">
+        <input type="button" onclick="location.href='delete-example.php';" value="Slett Eksempel">
         <br>
         
         <?php
