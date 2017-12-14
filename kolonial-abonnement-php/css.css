@@ -60,7 +60,7 @@
     left: 0;
     height: 100px;
     width: 90px;
-    display: block;
+    display: none;
     z-index: 1;
     background-color: orange;
 }
