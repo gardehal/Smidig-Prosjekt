@@ -1,6 +1,6 @@
 <?php
     require 'connection.php';
-    $statement1 = $connection->prepare('SELECT * FROM abonnement WHERE kunde_id = 16'); //statisk kunde
+    $statement1 = $connection->prepare('SELECT * FROM abonnement WHERE kunde_id = 15'); //statisk kunde
     require 'statement-execute-1.php'; 
 ?>
 
