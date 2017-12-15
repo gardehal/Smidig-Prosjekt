@@ -13,7 +13,7 @@
         <h1>Abonnement</h1>
         
         <!--- Visning --->
-        <input type="button" onclick="location.href='insert-example.php';" value="Nytt Abonnement">
+        <input type="button" onclick="location.href='insert-example.php';" value="Nytt Eksempel">
         <input type="button" onclick="location.href='delete-example.php';" value="Slett Eksempel">
         <br>
         
