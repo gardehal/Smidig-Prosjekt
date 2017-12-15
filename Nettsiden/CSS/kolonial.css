@@ -21,7 +21,6 @@ input {
 }
 
 #logo {
-    height: 100%;
     flex-wrap: wrap;
     
 }
@@ -36,7 +35,7 @@ input {
 }
 
 #shopping {
-    height: 3rem;
+    height: 2rem;
 }
 
 ul {
@@ -50,3 +49,103 @@ a {
 #search {
     
 }
+
+#oppskrifter {
+    height: 2rem;
+}
+
+#varer {
+    height: 2rem;
+}
+
+#lagkonto {
+    background-color: #F6A41E;
+    border-radius: 0.3rem;
+}
+
+#hamburger-menu-icon {
+    display:none;
+    width: 2.1rem;
+    border: 0.1rem solid #F6A41E;
+    border-radius: 0.5rem;
+    color: #F6A41E;
+
+}
+
+.hamburger-line {
+    display: block;
+    width: 1.5rem;
+    height: 0.2rem;
+    background-color: #F6A41E;
+    margin: 0.3rem;
+}
+
+
+@media (max-width: 669px) {
+    
+    #ul {
+        display: none;
+    }
+    /* DISPLAYS LOGO*/
+    input {
+        top: 0;
+        width: 15rem;
+        margin: auto;
+    }
+    
+    #logo {
+        height: 2.5rem;
+    }
+    
+    #hamburger-menu-icon {
+        float: inherit;
+        display: inline-block;
+    }
+    
+    #search {
+        margin: auto;
+    }
+    
+    #header {
+        margin: auto;
+        justify-content: center; 
+        align-items: center; 
+        background-color: #FBFBFB;
+        width: 15rem;
+}
+}
+
+@media (max-width: 1225px) {
+    li {
+        display: none;
+    }
+    
+    #shopping, #oppskrifter, #varer{
+        height: 4rem;
+    }
+}
+
+@media (max-width: 962px) {
+    li {
+        display: none;
+    }
+    
+    #shopping, #oppskrifter, #varer{
+        height: 2rem;
+    }
+}
+
+@media (max-width: 950px) {
+    li {
+        display: none;
+    }
+    
+    #shopping, #oppskrifter, #varer{
+        height: 2rem;
+    }
+    
+    input {
+        width: 13rem
+    }
+}
+
