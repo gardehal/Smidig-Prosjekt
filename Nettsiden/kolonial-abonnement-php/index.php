@@ -6,6 +6,7 @@
     require '../HTML/header.html';
 ?>
 
+<!--- PHP CSS (kan inkluderes i en header) --->
 <link rel="stylesheet" href="css.css"/>
 
 <div id="container">
