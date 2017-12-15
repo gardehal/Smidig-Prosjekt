@@ -29,10 +29,10 @@ input {
 #ul .nav-link {
     display: inline-block;
     padding: 0.7rem;
-    font-size: 1.2rem;
-    font-family: sans-serif;
+    font-size: 1rem;
+    font-family: 'Open Sans', sans-serif;
     font-weight: 600;
-    color: black;
+    color: #403947;
 }
 
 #shopping {
