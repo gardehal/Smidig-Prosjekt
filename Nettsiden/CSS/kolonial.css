@@ -116,6 +116,10 @@ a {
         background-color: #FBFBFB;
         width: 15rem;
 }
+    
+    dropdownliste {
+        display: none;
+    }
 }
 
 @media (max-width: 1225px) {

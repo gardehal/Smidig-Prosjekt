@@ -1,6 +1,6 @@
 <?php
     require 'connection.php';
-    $getsearch = $_GET['seachbar'];
+    $getsearch = $_GET['searchbar'];
     $statement1 = $connection->prepare('SELECT * FROM abonnement 
     WHERE kunde_id = "'.$getsearch.'"
     ORDER BY kunde_id DESC');
