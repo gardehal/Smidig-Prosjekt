@@ -9,20 +9,27 @@
     require '../HTML/header.html';
 ?>
 
-<h1> Viser resultater for <?= $getsearch ?> </h1>
+<!--- PHP CSS (kan inkluderes i en header) --->
+<link rel="stylesheet" href="css.css"/>
 
-<?php
-    foreach ($events1 as $event) 
-    {   
-        require 'card.php';
-        echo "<br>";
-        $searchcounter++;
-    } 
-    if($searchcounter == 0)
-    {
-        echo "Beklager! Vi fant ingen artikkler med $getsearch!";
-    }
-?>
+<div id="container">
+    <div id="content">
+        <h1> Viser resultater for <?= $getsearch ?> </h1>
+
+        <?php
+            foreach ($events1 as $event) 
+            {   
+                require 'card.php';
+                echo "<br>";
+                $searchcounter++;
+            } 
+            if($searchcounter == 0)
+            {
+                echo "Beklager! Vi fant ingen artikkler med $getsearch!";
+            }
+        ?>
+    </div>
+</div>
 
 <?php
     //require 'footer.php';
