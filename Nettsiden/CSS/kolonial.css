@@ -90,7 +90,7 @@ a {
     #ul {
         display: none;
     }
-    input {
+    #searchbar {
         top: 0;
         width: 15rem;
         margin: auto;
