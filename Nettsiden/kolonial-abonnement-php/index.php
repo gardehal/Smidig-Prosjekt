@@ -3,7 +3,7 @@
     $statement1 = $connection->prepare('SELECT * FROM abonnement ORDER BY kunde_id');
     require 'statement-execute-1.php';
 
-    require '../HTML/header.php';
+    require '../HTML/header.html';
 ?>
 
 <link rel="stylesheet" href="css.css"/>

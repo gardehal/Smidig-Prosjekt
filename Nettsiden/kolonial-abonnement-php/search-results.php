@@ -6,7 +6,7 @@
     ORDER BY kunde_id DESC');
     require 'statement-execute-1.php';
 
-    require '../HTML/header.php';
+    require '../HTML/header.html';
 ?>
 
 <h1> Viser resultater for <?= $getsearch ?> </h1>
