@@ -6,7 +6,7 @@
 }
 
 
-input {
+#searchbar {
     position: relative;
     text-align: center;
     width: 25rem;
@@ -151,7 +151,7 @@ a {
         height: 2rem;
     }
     
-    input {
+    #searchbar {
         width: 13rem
     }
 }
