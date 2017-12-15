@@ -80,13 +80,16 @@ a {
     margin: 0.3rem;
 }
 
+#dropdownliste {
+    display: none;
+}
+
 
 @media (max-width: 669px) {
     
     #ul {
         display: none;
     }
-    /* DISPLAYS LOGO*/
     input {
         top: 0;
         width: 15rem;
