@@ -1,12 +1,12 @@
 <?php
     require 'connection.php';
-    $getsearch = $_GET['search'];
+    $getsearch = $_GET['seachbar'];
     $statement1 = $connection->prepare('SELECT * FROM abonnement 
     WHERE kunde_id = "'.$getsearch.'"
     ORDER BY kunde_id DESC');
     require 'statement-execute-1.php';
 
-    //require 'header.php';
+    require '../HTML/header.php';
 ?>
 
 <h1> Viser resultater for <?= $getsearch ?> </h1>

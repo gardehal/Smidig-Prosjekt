@@ -31,7 +31,10 @@
                 <li><a class="dropdown-link" href="loggin">Logg in</a></li>
             </ul>
             <span class="text"></span>
-            <input placeholder="Søk i 6000 varer">
+            <form id="" action="search-results.php" method="GET">
+                <input name="seachbar" placeholder="Søk i 6000 varer">
+                <!---<input id="search-button" type="submit" value="Søk">--->
+            </form>
         
     </div>
         <nav>
