@@ -1,7 +1,9 @@
 <?php
     require 'connection.php';
-    $statement1 = $connection->prepare('SELECT * FROM abonnement ORDER BY kunde_id'); //statisk kunde
-    require 'statement-execute-1.php'; 
+    $statement1 = $connection->prepare('SELECT * FROM abonnement ORDER BY kunde_id');
+    require 'statement-execute-1.php';
+
+    //require 'header.php';
 ?>
 
 <link rel="stylesheet" href="css.css"/>
@@ -10,8 +12,8 @@
     <div id="content">
         <h1>Abonnement</h1>
         
-        <!--- Verktøy --->
-        <input type="button" onclick="location.href='insert-example.php';" value="Nytt Abonnement">
+        <!--- Visning --->
+        <input type="button" onclick="location.href='insert-example.php';" value="Nytt Eksempel">
         <input type="button" onclick="location.href='delete-example.php';" value="Slett Eksempel">
         <br>
         
@@ -24,8 +26,12 @@
             }
             if($contentcounter == 0)
             {
-                echo "Beklager! Vi fant ingen hendelser!";
+                echo "Beklager, vi fant ingen hendelser! Prøv å søke på en kunde ID.";
             }
         ?>
     </div>
 </div>
+
+<?php
+    //require 'footer.php';
+?>
