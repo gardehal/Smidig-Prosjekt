@@ -9,18 +9,15 @@ namespace abonoment
 {
     using System.Data.SqlClient;
     using System.Data;
-    class MainClass
+    class Abonnement
     {
-        static void Main()
+        public static void Oppdater()
         {
             // Create the connection to the resource!
             // This is the connection, that is established and
             // will be available throughout this block.
             Console.WriteLine("check");
             //connection string er den som viser hvilken database ect som man skal connecte til.
-            //local string:
-            //String connectionString = "Server=localhost;Database=abonoment;Uid=root;pwd=mysqlrix3996;Convert Zero Datetime=True";
-            // network string: 
             String connectionString = "Server=tek.westerdals.no;PORT=3306;Database=garale16_abonnement;Uid=garale16_admin;pwd=GA16AdminPassord;Convert Zero Datetime=True";
             MySqlConnection conn = new MySqlConnection(connectionString);
             MySqlCommand cmd;
@@ -31,7 +28,6 @@ namespace abonoment
             if (conn.State == ConnectionState.Open)
             {
                 Console.WriteLine("connection!");
-                Console.ReadKey();
             }
             try
             {
@@ -70,6 +66,11 @@ namespace abonoment
                         Console.WriteLine("før add: " + forigeBestilling);
                         int intervall =(int) row["intervall"];
                         DateTime nesteBestilling = forigeBestilling.AddDays(intervall*7);
+                        //setter nestebestilling til en framtidig dato, ikke bare neste intervall uavhengig av dato.
+                        while(nesteBestilling.Date < thisDay.Date)
+                        {
+                            nesteBestilling = nesteBestilling.AddDays(intervall * 7);
+                        }
                         Console.WriteLine("etter add: " + nesteBestilling);
                         string dato = nesteBestilling.ToString("s"); //henter datoen ut til riktig format
                         dato = dato.Substring(0, 10); //tar bort tiden fra datetime uthentingen
@@ -91,7 +92,6 @@ namespace abonoment
             }
                 Console.WriteLine("over");
                 conn.Close();
-                Console.ReadKey();
             
         }
     }
