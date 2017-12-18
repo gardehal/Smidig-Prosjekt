@@ -18,7 +18,7 @@
     "'.$listeid.'",
     NULL,
     "'.$_POST['create-leveringstid'].'", 
-    "'.$_POST['create-leveringsdato'].'", 
+    CAST("'.$_POST['create-leveringsdato'].'" AS DATE), 
     "'.$intervall.'")');
     $statement1->execute();
 
