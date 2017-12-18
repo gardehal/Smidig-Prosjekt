@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
 
-namespace abonoment
+namespace smidigProsjekt
 {
     using System.Data.SqlClient;
     using System.Data;
@@ -32,14 +32,6 @@ namespace abonoment
             try
             {
                 cmd = conn.CreateCommand();
-                /* cmd.CommandText = "INSERT INTO abonnement(kunde_id,liste_id,bestiling_id,leverings_dato,leverings_tidspunkt,intervall)" +
-                     "VALUES(@kunde,@liste,@bestilling,@dato,@tidspunkt,@intervall)";
-                 cmd.Parameters.AddWithValue("@kunde", rnd.Next(1, 1000));
-                 cmd.Parameters.AddWithValue("@liste", rnd.Next(1, 1000));
-                 cmd.Parameters.AddWithValue("@bestilling", rnd.Next(1, 1000));
-                 cmd.Parameters.AddWithValue("@dato", "1001-01-01");
-                 cmd.Parameters.AddWithValue("@tidspunkt", "09-14");11
-                 cmd.Parameters.AddWithValue("@intervall", rnd.Next(1, 9));*/
 
                 //skal se gjennom de ordrene som er null eller senere en dagens dato, og endre leveringsdatoen til neste levering.
                 DateTime thisDay = DateTime.Today;
@@ -77,11 +69,14 @@ namespace abonoment
                         Console.WriteLine("setter inn :" + dato + "\n");
                         //her tar man å sender bestilling til prossesering
 
+                        //får tilbake id til bestillingen:
+                        int bestiling_id = rnd.Next(0, 999999);
 
                         //setter in datoen til neste bestilling i databasen
-                        newCmd.CommandText = "UPDATE abonnement SET leverings_dato = @leverings_dato WHERE kunde_id =" +
+                        newCmd.CommandText = "UPDATE abonnement SET leverings_dato = @leverings_dato, bestiling_id = @bestiling_id  WHERE kunde_id =" +
                            row["kunde_id"] + " AND liste_id = " + row["liste_id"] + ";";
-                       newCmd.Parameters.AddWithValue("@leverings_dato", dato);
+                        newCmd.Parameters.AddWithValue("@leverings_dato", dato);
+                        newCmd.Parameters.AddWithValue("@bestiling_id", bestiling_id);
                         newCmd.ExecuteNonQuery();
                     }
                 }
@@ -93,6 +88,66 @@ namespace abonoment
                 Console.WriteLine("over");
                 conn.Close();
             
+        }
+
+        public static void Utdatert()
+        {
+            String connectionString = "Server=tek.westerdals.no;PORT=3306;Database=garale16_abonnement;Uid=garale16_admin;pwd=GA16AdminPassord;Convert Zero Datetime=True";
+            MySqlConnection conn = new MySqlConnection(connectionString);
+            MySqlCommand cmd;
+            conn.Open();
+            cmd = conn.CreateCommand();
+            DateTime thisDay = DateTime.Today;
+            string today = thisDay.ToString("s");
+            today = today.Substring(0, 10);
+            cmd.CommandText = "SELECT * FROM abonnement WHERE leverings_dato < '" +
+                today + "';";
+            MySqlDataAdapter adap = new MySqlDataAdapter(cmd);
+            DataSet ds = new DataSet();
+            adap.Fill(ds);
+            foreach (DataTable table in ds.Tables)
+            {
+                foreach (DataRow row in table.Rows)
+                {
+                    foreach(var item in row.ItemArray)
+                    {
+                        Console.WriteLine(item);
+                    }
+                    Console.WriteLine("\n");
+                }
+            }
+            conn.Close();
+        }
+
+        public static void Add()
+        {
+            String connectionString = "Server=tek.westerdals.no;PORT=3306;Database=garale16_abonnement;Uid=garale16_admin;pwd=GA16AdminPassord;Convert Zero Datetime=True";
+            MySqlConnection conn = new MySqlConnection(connectionString);
+            MySqlCommand cmd;
+            Random rnd = new Random();
+            conn.Open();
+            if (conn.State == ConnectionState.Open)
+            {
+                Console.WriteLine("connection!");
+            }
+            try
+            {
+                cmd = conn.CreateCommand();
+                cmd.CommandText = "INSERT INTO abonnement(kunde_id,liste_id,bestiling_id,leverings_dato,leverings_tidspunkt,intervall)" +
+                         "VALUES(@kunde,@liste,@bestilling,@dato,@tidspunkt,@intervall)";
+                cmd.Parameters.AddWithValue("@kunde", rnd.Next(1, 1000));
+                cmd.Parameters.AddWithValue("@liste", rnd.Next(1, 1000));
+                cmd.Parameters.AddWithValue("@bestilling", rnd.Next(1, 1000));
+                cmd.Parameters.AddWithValue("@dato", "1001-01-01");
+                cmd.Parameters.AddWithValue("@tidspunkt", "09-14");
+                cmd.Parameters.AddWithValue("@intervall", rnd.Next(1, 9));
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            conn.Close();
         }
     }
 }

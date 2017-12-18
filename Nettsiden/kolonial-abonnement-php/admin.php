@@ -17,36 +17,6 @@
         <h1>Admin</h1>
         <br>
         
-        <h2>Abonnement</h2>
-        <br>
-        <?php
-            foreach ($events1 as $event) 
-            {   
-                require 'crud/cards/subscription-card.php';
-                echo "<br>";
-                $searchcounter++;
-            } 
-            if($searchcounter == 0)
-            {
-                echo "Beklager! Vi fant ingen abonnement med $getsearch!";
-            }
-        ?>
-        <br>
-        
-        <h2>Lister</h2>
-        <?php
-            foreach ($events2 as $event) 
-            {   
-                require 'crud/cards/list-card.php';
-                echo "<br>";
-                $searchcounter++;
-            } 
-            if($searchcounter == 0)
-            {
-                echo "Beklager! Vi fant ingen lister med $getsearch!";
-            }
-        ?>
-        
         <!--- Visning --->
         <input type="button" onclick="location.href='crud/insert-example.php';" value="Nytt Eksempel">
         <input type="button" onclick="location.href='crud/delete-example.php';" value="Slett Eksempel">
@@ -65,16 +35,16 @@
         <h2>Legg til abonnement</h2>
         <form class="" action="crud/create-subscription.php" method="post">
             
-            <input type="number" id="kunde-id" name="kunde-id" placeholder="Kunde ID">
-            <input type="number" id="liste-id" name="liste-id" placeholder="Liste ID">
+            <input type="number" id="kunde-id" name="create_kunde_id" placeholder="Kunde ID">
+            <input type="number" id="liste-id" name="create_liste_id" placeholder="Liste ID">
             
             <div id="dropdown-order">
-                <button type="button" id="dropdown-btn" class="" onclick="toggleDropdown()">Endre levering</button>
+                <button type="button" id="dropdown-admin-btn" class="" onclick="toggleDropdownAdmin()">Endre levering</button>
                 
-                <div id="dropdown-content" style="display: none;"> <!--- display:none virker ikke i CSS... --->
+                <div id="dropdown-content-admin" class="dropdown-content" style="display: none;"> <!--- display:none virker ikke i CSS... --->
                     <!--- Dropdown tid --->
-                    <select name="leveringstid">
-                        <option value="<?= $event['leverings_tidspunkt'] ?>" selected><?= $event['leverings_tidspunkt'] ?></option>
+                    <select name="create-leveringstid">
+                        <option selected disabled>Tidspunkt</option>
                         <option value="07-09">07-09</option>
                         <option value="08-10">08-10</option>
                         <option value="08-11">08-11</option>
@@ -87,19 +57,66 @@
                     </select>
 
                     <!--- Intervall --->
-                    <input type="number" id="intervall" name="intervall" value="<?= $event['intervall'] ?>">
+                    <input type="number" id="intervall" name="create_intervall" value="Intervall i uker">
 
                     <!--- Leveringsdato --->
-                    <input type="date" id="leveringsdato" name="leveringsdato" value="<?= $event['leverings_dato'] ?>">
+                    <input type="date" id="create-leveringsdato" name="leveringsdato" value="">
                 </div>
             </div>
                 
-            <!--- Kjøp listen (burde gå til Handlekurv) --->
-            <button type="button" id="sub-list-btn">Legg til abonnement</button>
+            <button type="button" onclick="submit();" style="position: relative; top: 10px;">Legg til abonnement</button>
         </form>
+        
+        <br>
+        <hr>
+        
+         <h2>Abonnement</h2>
+        <br>
+        <?php
+            foreach ($events1 as $event) 
+            {   
+                require 'crud/cards/subscription-card.php';
+                echo "<br><br>";
+                $searchcounter++;
+            } 
+            if($searchcounter == 0)
+            {
+                echo "Beklager! Vi fant ingen abonnement med $getsearch!";
+            }
+        ?>
+        <hr>
+        
+        <h2>Lister</h2>
+        <?php
+            foreach ($events2 as $event) 
+            {   
+                require 'crud/cards/list-card.php';
+                echo "<br><br>";
+                $searchcounter++;
+            } 
+            if($searchcounter == 0)
+            {
+                echo "Beklager! Vi fant ingen lister med $getsearch!";
+            }
+        ?>
         
     </div>
 </div>
+
+<script>
+    function toggleDropdownAdmin() //ser ikke ut til å reagere på riktig element, ID burde ikke virke, men kanskje class gjør. Elementer utenfra som contentcounter (se index.php) henter bare det siste elementet. Prøve array?
+        {
+            var x = document.getElementById("dropdown-content-admin");
+            if (x.style.display === "none") 
+            {
+                x.style.display = "block";
+            } 
+            else 
+            {
+                x.style.display = "none";
+            }
+        }
+</script>
 
 <?php
     //require 'footer.php';

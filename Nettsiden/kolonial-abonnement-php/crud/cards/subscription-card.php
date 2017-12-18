@@ -2,18 +2,25 @@
     <div id="display">
         <p>
             Kunde ID: <?= $event['kunde_id'] ?> |
-            Liste ID: <?= $event['liste_id'] ?> |
+            <?= $event['liste_navn'] ?> <?= $event['liste_id'] ?> |//endre "liste_id" til abonement.liste_id hvis dette ikke funker.
             Leveringsdato: <?= $event['leverings_dato'] ?>
         </p>
     </div>
     
-    <div id="select">
-        <form class="" action="crud/update-subscription.php?id=<?= $event['kunde_id'] ?>" method="post">
+    <div id="select" style="position: absolute; width: 30%; top: -5px;">
+        <!--- Slett abonnement --->
+        <form class="card-form" action="crud/delete-subscription.php" method="post" style="position: absolute; top: 5px; z-index: 3;">
+            <input type="button" id="delete-btn" onclick="submit();" value="Slett">
+            <input type="hidden" name="slett_kunde_id" value="<?= $event['kunde_id'] ?>">
+            <input type="hidden" name="slett_liste_id" value="<?= $event['liste_id'] ?>">
+        </form>
+        
+        <form class="card-form" action="crud/update-subscription.php?id=<?= $event['kunde_id'] ?>" method="post">
             <div id="dropdown-order">
                 <!--- Endre abonnement --->   
-                <button type="button" id="dropdown-btn" class="" onclick="toggleDropdown()">Endre levering</button>
+                <button type="button" id="dropdown-btn" class="" onclick="toggleDropdown()" style="left: 25%;">Endre levering</button>
                 
-                <div id="dropdown-content" style="display:none;"> <!--- display:none virker ikke i CSS... --->
+                <div id="dropdown-content" style="display:none; left: 25%;"> <!--- display:none virker ikke i CSS... --->
                     <!--- Dropdown tid --->
                     <select name="leveringstid">
                         <option value="<?= $event['leverings_tidspunkt'] ?>" selected><?= $event['leverings_tidspunkt'] ?></option>

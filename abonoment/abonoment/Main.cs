@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace abonoment
+namespace smidigProsjekt
 {
     class Start
     {
@@ -21,6 +21,12 @@ namespace abonoment
                 {
                     case "oppdater":
                         Abonnement.Oppdater();
+                        break;
+                    case "utdatert":
+                        Abonnement.Utdatert();
+                        break;
+                    case "add":
+                        Abonnement.Add();
                         break;
                     case "hjelp":
                         Instructions.Commands();

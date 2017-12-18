@@ -1,6 +1,7 @@
 <?php
     require 'require/connection.php';
-    $statement1 = $connection->prepare('SELECT * FROM abonnement ORDER BY kunde_id');
+    $statement1 = $connection->prepare('SELECT kunde_id, liste_navn, abonnement.liste_id, bestiling_id, leverings_dato, leverings_tidspunkt, intervall FROM abonnement 
+    LEFT JOIN liste ON abonnement.liste_id=liste.liste_id ORDER BY kunde_id');
     require 'require/statement-execute-1.php';
 
     require '../HTML/header.html';
