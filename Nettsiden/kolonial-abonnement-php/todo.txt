@@ -1,5 +1,5 @@
 TODO:
-- Restriksjoner input (dato, intervall)
+- Restriksjoner input (dato, intervall) -> filter_var(, FILTER_SANITIZE_STRING);
 - Linke lister til abonnement
 - Oppdater liste?
 - Bedre CCS rundt dropdown meny?
