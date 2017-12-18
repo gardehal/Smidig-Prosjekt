@@ -1,4 +1,4 @@
 TODO:
-- Linke lister til abonnement
+- Linke lister til abonnement -formatere dato og enum riktig i SQL query
 - Bedre CCS rundt dropdown meny?
 - Bedre CSS generelt

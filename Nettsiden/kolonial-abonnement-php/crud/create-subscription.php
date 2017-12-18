@@ -1,5 +1,7 @@
 <?php
     require '../require/connection.php';
+    date_default_timezone_set('Europe/Oslo');
+    $date = date('Y-m-d H:i:s', time());
 
     //Scrubbe og restriksjoner
     $kundeid = filter_var($_POST['create_kunde_id'], FILTER_SANITIZE_STRING);
@@ -18,7 +20,7 @@
     "'.$listeid.'",
     NULL,
     "'.$_POST['create-leveringstid'].'", 
-    CAST("'.$_POST['create-leveringsdato'].'" AS DATE), 
+    "'.$_POST['create-leveringsdato'].'", 
     "'.$intervall.'")');
     $statement1->execute();
 
