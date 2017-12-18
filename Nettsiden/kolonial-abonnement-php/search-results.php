@@ -28,7 +28,7 @@
             foreach ($events1 as $event) 
             {   
                 require 'crud/cards/subscription-card.php';
-                echo "<br>";
+                echo "<br><br>";
                 $searchcounter++;
             } 
             if($searchcounter == 0)
@@ -36,14 +36,14 @@
                 echo "Beklager! Vi fant ingen abonnement med $getsearch!";
             }
         ?>
-        <br>
+        <hr>
         
         <h2>Lister</h2>
         <?php
             foreach ($events2 as $event) 
             {   
                 require 'crud/cards/list-card.php';
-                echo "<br>";
+                echo "<br><br>";
                 $searchcounter++;
             } 
             if($searchcounter == 0)

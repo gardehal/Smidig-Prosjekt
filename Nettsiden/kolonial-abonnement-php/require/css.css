@@ -19,6 +19,11 @@
 
 /*----- Containere End ------*/
 
+.card-form
+{
+    position: absolute;
+}
+
 /*----- Card Start -----*/
 
 #card
@@ -38,7 +43,8 @@
     position: absolute;
     top: 10px;
     right: 0;
-    width: 200px;
+    width: 50%;
+    background-color: red;
 }
 
 #intervall, #leveringstid, #leveringsdato
@@ -65,9 +71,14 @@
     background-color: orange;
 }
 
+#delete-btn
+{
+    position: absolute;
+}
+
 #dropdown-btn
 {
-    position: relative;
+    position: absolute;
 }
 
 #update-list-btn

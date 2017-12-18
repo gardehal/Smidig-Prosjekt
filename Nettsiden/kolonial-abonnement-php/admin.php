@@ -17,36 +17,6 @@
         <h1>Admin</h1>
         <br>
         
-        <h2>Abonnement</h2>
-        <br>
-        <?php
-            foreach ($events1 as $event) 
-            {   
-                require 'crud/cards/subscription-card.php';
-                echo "<br>";
-                $searchcounter++;
-            } 
-            if($searchcounter == 0)
-            {
-                echo "Beklager! Vi fant ingen abonnement med $getsearch!";
-            }
-        ?>
-        <br>
-        
-        <h2>Lister</h2>
-        <?php
-            foreach ($events2 as $event) 
-            {   
-                require 'crud/cards/list-card.php';
-                echo "<br>";
-                $searchcounter++;
-            } 
-            if($searchcounter == 0)
-            {
-                echo "Beklager! Vi fant ingen lister med $getsearch!";
-            }
-        ?>
-        
         <!--- Visning --->
         <input type="button" onclick="location.href='crud/insert-example.php';" value="Nytt Eksempel">
         <input type="button" onclick="location.href='crud/delete-example.php';" value="Slett Eksempel">
@@ -97,6 +67,36 @@
             <!--- Kjøp listen (burde gå til Handlekurv) --->
             <button type="button" id="sub-list-btn">Legg til abonnement</button>
         </form>
+        
+         <h2>Abonnement</h2>
+        <br>
+        <?php
+            foreach ($events1 as $event) 
+            {   
+                require 'crud/cards/subscription-card.php';
+                echo "<br><br>";
+                $searchcounter++;
+            } 
+            if($searchcounter == 0)
+            {
+                echo "Beklager! Vi fant ingen abonnement med $getsearch!";
+            }
+        ?>
+        <hr>
+        
+        <h2>Lister</h2>
+        <?php
+            foreach ($events2 as $event) 
+            {   
+                require 'crud/cards/list-card.php';
+                echo "<br><br>";
+                $searchcounter++;
+            } 
+            if($searchcounter == 0)
+            {
+                echo "Beklager! Vi fant ingen lister med $getsearch!";
+            }
+        ?>
         
     </div>
 </div>

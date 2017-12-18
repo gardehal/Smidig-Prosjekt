@@ -19,7 +19,7 @@
         <button type="button" id="buy-list-btn">Kjøp listen</button>
         
         <!--- Slett liste --->
-        <form class="" action="crud/delete-list.php" method="post">
+        <form class="" action="crud/delete-list.php" method="post" style="top: 5px;">
             <input type="button" onclick="submit();" value="Slett">
             <input type="hidden" name="slett_liste_id" value="<?= $event['liste_id'] ?>">
         </form>
