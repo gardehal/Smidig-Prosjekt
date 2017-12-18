@@ -8,8 +8,9 @@
     </div>
     
     <div id="select">
-        <form class="" action="update-subscription.php?id=<?= $event['kunde_id'] ?>" method="post">
+        <form class="" action="crud/update-subscription.php?id=<?= $event['kunde_id'] ?>" method="post">
             <div id="dropdown-order">
+                <!--- Endre abonnement --->   
                 <button type="button" id="dropdown-btn" class="" onclick="toggleDropdown()">Endre levering</button>
                 
                 <div id="dropdown-content" style="display:none;"> <!--- display:none virker ikke i CSS... --->
@@ -41,7 +42,7 @@
             <!--- Kjøp listen (burde gå til Handlekurv) --->
             <button type="button" id="buy-list-btn">Kjøp listen</button>
 
-
+            <!--- Id-er ---> 
             <input type="hidden" name="edit_kunde_id" value="<?= $event['kunde_id'] ?>"> 
             <input type="hidden" name="edit_liste_id" value="<?= $event['liste_id'] ?>">
         </form>
