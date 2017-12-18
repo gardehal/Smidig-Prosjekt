@@ -33,12 +33,15 @@
             </ul>
             <span class="text"></span>
             
-            <form id="" action="search-results.php" method="GET" style="display: inline-block;">
+            <div id="searchbar-main">
+             <form action="search-results.php" method="GET">
                 <input id="searchbar" name="searchbar" placeholder="Søk i 6000 varer">
                 <!---<input id="search-button" type="submit" value="Søk">--->
             </form>
-        
+            </div>
     </div>
+
+        
         <nav>
         <ul id="ul">
             <img id="varer" src="../Bilder/icons8-ingredients-100.png">
@@ -52,6 +55,13 @@
     </nav>
 
 </div>
+    
+                <div id="searchbar-mobil">
+             <form action="search-results.php" method="GET">
+                <input id="searchbar" name="searchbar" placeholder="Søk i 6000 varer">
+                <!---<input id="search-button" type="submit" value="Søk">--->
+            </form>
+        </div>
 <script>
     function toggleDropdown() //ser ikke ut til å reagere på riktig element, ID burde ikke virke, men kanskje class gjør. Elementer utenfra som contentcounter (se index.php) henter bare det siste elementet. Prøve array?
         {
