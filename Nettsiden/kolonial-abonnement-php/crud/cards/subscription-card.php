@@ -2,7 +2,7 @@
     <div id="display">
         <p>
             Kunde ID: <?= $event['kunde_id'] ?> |
-            <?= $event['liste_navn'] ?> <?= $event['liste_id'] ?> |
+            <?= $event['liste_navn'] ?> <?= $event['liste_id'] ?> |//endre "liste_id" til abonement.liste_id hvis dette ikke funker.
             Leveringsdato: <?= $event['leverings_dato'] ?>
         </p>
     </div>
