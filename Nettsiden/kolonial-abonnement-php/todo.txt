@@ -1,8 +1,9 @@
 TODO:
-- Restriksjoner input (dato, intervall)
+- Linke lister til abonnement
+- Oppdater liste?
 - Bedre CCS rundt dropdown meny?
 - Bedre CSS generelt
-- Dynamisk kundeswitch
+- Dynamisk kundeswitch --------- delvis med søk
         <form action="index.php" method="GET">
             <input id="search-field" name="update_customer_id" type="number">
             <input id="search-button" type="submit" value="Søk">
@@ -15,5 +16,3 @@ TODO:
     }
     $statement1 = $connection->prepare('SELECT * FROM abonnement 
     WHERE kunde_id = "'.$getsearch.'"');
-    
-- Integrere Robins bestillings-program i nettsiden

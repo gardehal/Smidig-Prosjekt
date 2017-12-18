@@ -1,7 +1,6 @@
 <?php
-require 'connection.php';
+    require '../require/connection.php';
 
-    //todo_id, todo_check, todo_todo
     $statement1 = $connection->prepare('INSERT INTO abonnement VALUES (
     0, 
     0,
@@ -12,5 +11,5 @@ require 'connection.php';
 
     $statement1->execute();
 
-    header('Location: index.php');
+    header('Location: ../admin.php');
     exit;
