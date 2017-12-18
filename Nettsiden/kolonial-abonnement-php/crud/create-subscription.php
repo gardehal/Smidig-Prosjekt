@@ -12,6 +12,7 @@
         exit;
     }
 
+    //SQL Dateformat yyyy/mm/dd
     $statement1 = $connection->prepare('INSERT INTO abonnement VALUES (
     "'.$kundeid.'",
     "'.$listeid.'",
