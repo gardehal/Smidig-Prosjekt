@@ -1,21 +1,23 @@
 <div id="card">
     <div id="display">
-        <p>
-            <!--- Dele opp listen i seksjoner så det ser bedre ut (virker ikke)
-            <div class="listenavn-space" style="position: absolute; width: 200px; left: 0;">
-                Kunde ID: <?= $event['kunde_id'] ?>
-            </div> |
-            <div class="listenavn-space" style="position: absolute; width: 200px; left: 0;">
-                <?= $event['liste_navn'] ?> ID: <?= $event['liste_id'] ?>
-            </div> |
-            <div class="listenavn-space" style="position: absolute; width: 200px; left: 0;">
-                Leveringsdato: <?= $event['leverings_dato'] ?>
-            </div> --->
-            
+        <!--- Dele opp listen i seksjoner så det ser bedre ut (css.css virker ikke) --->
+        <div class="listenavn-space" style="position: absolute; width: 100px; left: 0;">
             Kunde ID: <?= $event['kunde_id'] ?> |
-            <?= $event['liste_navn'] ?> ID: <?= $event['liste_id'] ?> |
+        </div>
+        <div class="listenavn-space" style="position: absolute; width: 150px; left: 100px;">
+            <?= $event['liste_navn'] ?>
+        </div>
+        <div class="listenavn-space" style="position: absolute; width: 50px; left: 250px;">
+            | ID: <?= $event['liste_id'] ?> |
+        </div>
+        <div class="listenavn-space" style="position: absolute; width: 200px; left: 300px;">
             Leveringsdato: <?= $event['leverings_dato'] ?>
-        </p>
+        </div>
+        <!---
+        Kunde ID: <?= $event['kunde_id'] ?> |
+        <?= $event['liste_navn'] ?> ID: <?= $event['liste_id'] ?> |
+        Leveringsdato: <?= $event['leverings_dato'] ?>
+        --->
     </div>
     
     <div id="select" style="position: absolute; width: 30%; top: -5px;">

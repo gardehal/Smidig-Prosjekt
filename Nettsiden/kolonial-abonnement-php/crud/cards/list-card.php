@@ -1,11 +1,17 @@
 <div id="card">
     <div id="display">
-        <p>
-            <?= $event['liste_navn'] ?> |
-            Liste ID: <?= $event['liste_id'] ?> |
-            Antall varer: <?= $event['liste_vareantall'] ?> |
-            Total pris: <?= $event['liste_pris'] ?> kr
-        </p>
+        <div class="listenavn-space" style="position: absolute; width: 150px; left: 0;">
+            <?= $event['liste_navn'] ?>
+        </div>
+        <div class="listenavn-space" style="position: absolute; width: 50px; left: 150px;">
+            | ID: <?= $event['liste_id'] ?> |
+        </div>
+        <div class="listenavn-space" style="position: absolute; width: 150px; left: 200px;">
+            Antall varer: <?= $event['liste_vareantall'] ?>
+        </div>
+        <div class="listenavn-space" style="position: absolute; width: 200px; left: 350px;">
+            | Total pris: <?= $event['liste_pris'] ?> kr
+        </div>  
     </div>
     
     <div id="select" style="position: absolute; width: 30%; top: -5px;">        
