@@ -18,6 +18,11 @@
         <h1>Admin</h1>
         <br>
         
+        <!--- Navigering --->
+        <input type="button" onclick="location.href='abonnement.php';" value="Abonnement">
+        <input type="button" onclick="location.href='../INFOSIDE/infoside.php';" value="Infoside">
+        <br><br>
+        
         <!--- Visning --->
         <input type="button" onclick="location.href='crud/insert-example.php';" value="Nytt Eksempel">
         <input type="button" onclick="location.href='crud/delete-example.php';" value="Slett Eksempel">

@@ -58,7 +58,6 @@
 .dropdown-content
 {
     position: relative;
-    left: 25%;
     height: 100px;
     width: 90px;
     display: none;

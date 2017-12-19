@@ -26,7 +26,7 @@
                 <!--- Endre abonnement --->   
                 <button type="button" id="dropdown-btn" class="" onclick="toggleDropdown<?= $contentcounter ?>()" style="right: 55%;">Endre levering</button>
                 
-                <div id="dropdown-content<?= $contentcounter ?>" class="dropdown-content" style="position: absolute; display: none; top: 23px; left: 25%;">
+                <div id="dropdown-content<?= $contentcounter ?>" class="dropdown-content" style="position: absolute; display: none; top: 23px; right: 57.5%;">
                     <!--- Dropdown tid --->
                     <select name="leveringstid">
                         <option value="<?= $event['leverings_tidspunkt'] ?>" selected><?= $event['leverings_tidspunkt'] ?></option>
