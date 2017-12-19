@@ -33,6 +33,10 @@
     position: absolute;
 }
 
+.listenavn-space
+{
+}
+
 #select
 {
     position: absolute;
@@ -65,6 +69,7 @@
 #delete-btn
 {
     position: absolute;
+    right: 0;
 }
 
 #dropdown-btn
@@ -80,7 +85,6 @@
 #buy-list-btn
 {
     position: absolute;
-    right: 0;
 }
 
 /*----- Card End -----*/

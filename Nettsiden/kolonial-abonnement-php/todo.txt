@@ -1,4 +1,10 @@
 TODO:
 - Bedre CCS rundt dropdown meny?
+    Klikke utenfor dropdown = lukk/gjem
+    Kun en dropdown-content div kan vises om gangen
 - Bedre CSS generelt
     Noe CSS ligger i HTML/PHP fordi css.css ikke virker.
+    Lik spacing av select elemeneter i card
+- Enum dagen dato
+    <!--- <input type="date" id="leveringsdato" name="leveringsdato" value="<?= //$event['leverings_dato'] ?>"> --->
+    Lørdag, søndag + tider (velg dag først, leveringstoder endres ut ifra det)

@@ -51,10 +51,17 @@
             </select>
 
             <!--- Intervall --->
-            <input type="number" id="intervall" name="create_intervall" value="Intervall i uker">
+            <input type="number" id="intervall" name="create_intervall" placeholder="Intervall i uker">
 
             <!--- Leveringsdato --->
-            <input type="date" id="leveringsdato" name="create_leveringsdato" value="">
+            <select name="create_leveringsdato">
+                <option selected disabled>Leveringsdag</option>
+                <option value="2017-12-04">Mandag</option>
+                <option value="2017-12-05">Tirsdag</option>
+                <option value="2017-12-06">Onsdag</option>
+                <option value="2017-12-07">Torsdag</option>
+                <option value="2017-12-08">Fredag</option>
+            </select>
                 
             <button type="button" onclick="submit();">Legg til abonnement</button>
         </form>
