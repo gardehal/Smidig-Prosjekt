@@ -23,22 +23,19 @@
 
 /*    SEARCHBAR */
 
-#searchbar-xs-s {
-
-    width: 100%;
-    padding: 0.8rem 0rem;
-}
-
 #searchbar-m-l {
     display: none;
+}
+
+#searchbar-xs-s {
+    text-align: center;
+    width: 100%;
+    padding: 0.8rem 0rem;
 }
 
 #form-xs-s {
     margin: 0rem 0.5rem;
 }
-
-
-
 
 /* ICONS IN NAVITGATION */
 
@@ -169,6 +166,7 @@ a {
         display: block;
         width: 70%;
         padding: 0.8rem 0rem;
+        text-align: center;
     }
 
 
