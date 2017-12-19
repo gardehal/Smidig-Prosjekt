@@ -1,14 +1,14 @@
 #header {
     display: flex;
-    justify-content: space-between; 
-    align-items: center; 
+    justify-content: space-between;
+    align-items: center;
     background-color: #FBFBFB;
 }
 
-#search{
+#search {
     display: flex;
-    justify-content: space-between; 
-    align-items: center; 
+    justify-content: space-between;
+    align-items: center;
 }
 
 #searchbar {
@@ -20,7 +20,7 @@
     background-position: right;
     background-size: 1.7rem;
     font-family: sans-serif;
-    
+
 }
 
 #searchbar-mobil {
@@ -29,7 +29,7 @@
 
 #logo {
     display: flex;
-    
+
 }
 
 #ul .nav-link {
@@ -69,7 +69,7 @@ a {
 }
 
 #hamburger-menu-icon {
-    display:none;
+    display: none;
     width: 2.1rem;
     border: 0.1rem solid #F6A41E;
     border-radius: 0.5rem;
@@ -94,95 +94,123 @@ a {
 }
 
 /*Mobil-version */
+
 @media (max-width: 669px) {
-    
+
     #ul {
         display: none;
     }
-    
+
     #logo {
-        width: 50%;
+        height: 3rem;
     }
-    
+
     #searchbar-mobil {
         display: block;
         width: 100%;
     }
-    
+
     #searchbar-main {
         display: none;
     }
-    
+
     #hamburger-menu-icon {
         display: block;
         margin: auto;
     }
-    
+
     #search {
         display: flex;
         justify-content: center;
         vertical-align: middle;
     }
-    
+
 }
-    
-    dropdownliste {
+
+dropdownliste {
+    display: none;
+}
+
+/* TABLET */
+
+@media (min-width: 500px) {
+    li {
         display: none;
     }
+
+    #logo {
+        height: 3rem;
+    }
+
+    #shopping,
+    #oppskrifter,
+    #varer {
+        height: 2rem;
+        padding: 1rem;
+    }
+    /*
+    #shopping,
+    #oppskrifter,
+    #varer {
+        height: 2rem;
+        padding: 0.8rem;
+    }
+    */
 }
+
 /*Tablet-version */
+
 @media (max-width: 1225px) {
     li {
         display: none;
     }
-    
-    #shopping, #oppskrifter, #varer{
+
+    #logo {
+        height: 3rem;
+    }
+
+    #shopping,
+    #oppskrifter,
+    #varer {
         height: 2rem;
         padding: 0.8rem;
     }
-        
+
     #searchbar-main {
         width: 20rem;
     }
 
 }
 
-@media (max-width: 970px) {
-    li {
-        display: none;
-    }
-    
-    #shopping, #oppskrifter, #varer{
-        height: 2rem;
-        padding: 1rem;
-    }
-}
+
 
 @media (max-width: 1223px) {
     li {
         display: none;
     }
-    
-    #shopping, #oppskrifter, #varer{
+
+    #shopping,
+    #oppskrifter,
+    #varer {
         height: 2rem;
         padding: 1rem;
     }
-    
-    #searchbar {
 
-    }
+    #searchbar {}
 }
 
 @media (min-width: 780px) and (max-width: 950px) {
     li {
         display: none;
     }
-    
-    #shopping, #oppskrifter, #varer{
+
+    #shopping,
+    #oppskrifter,
+    #varer {
         height: 2rem;
         padding: 1rem;
     }
-    
+
     #searchbar {
         width: 13rem;
         vertical-align: middle;

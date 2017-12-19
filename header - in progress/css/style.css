@@ -1,0 +1,193 @@
+/* MOBIL */
+
+/* MOBIL */
+
+/* MOBIL */
+
+/*HEADER*/
+
+#main-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #FBFBFB;
+    padding: 0.5rem;
+    border-bottom: 1px #e9e9e9 solid;
+}
+
+/* LOGO */
+
+#logo {
+    height: 3rem;
+}
+
+/*    SEARCHBAR */
+
+#searchbar-xs-s {
+    margin-top: 1rem;
+    width: 100%;
+    padding: 0.8rem 0rem;
+}
+
+#searchbar-m-l {
+    display: none;
+}
+
+#form-xs-s {
+    margin: 0rem 0.5rem;
+}
+
+
+
+
+/* ICONS IN NAVITGATION */
+
+.icons {
+    display: none;
+}
+
+/* STYLING OF LINK TAGS */
+
+a {
+    text-decoration: none;
+    color: #403947;
+    cursor: pointer;
+}
+
+.nav-link {
+    display: none;
+    color: #403947;
+}
+
+#lag-konto-btn {
+    display: none;
+}
+
+
+/*HAMBURGER MENU*/
+
+#hamburger-menu-icon {
+    position: relative;
+    display: block;
+    margin: 0rem 0.5rem;
+    border: 0.1rem solid #F6A41E;
+    border-radius: 0.5rem;
+    color: #F6A41E;
+}
+
+.hamburger-line {
+    display: block;
+    width: 1.5rem;
+    height: 0.2rem;
+    background-color: #F6A41E;
+    margin: 0.3rem;
+}
+
+
+/*MEDIA QUERIES */
+
+/*MEDIA QUERIES */
+
+/*MEDIA QUERIES */
+
+@media (min-width: 500px) {
+    /* TABLET VERSION */
+    /* MAKES THE BANNER FLOAT ALL THE WAY UP TO THE NAVIGATION BAR */
+    /* DISPLAYS THE NAVIGATION */
+    .icons {
+        display: block;
+        height: 2.5rem;
+        margin-right: 0.5rem;
+    }
+
+    .nav-link {
+        display: none;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: bold;
+        font-size: 1rem;
+        margin-right: 1.5rem;
+    }
+
+    #logg-inn {
+        display: block;
+    }
+
+    #main-page-navigation {
+        display: inline-flex;
+        align-items: center;
+        text-align: center;
+        margin-right: 1rem;
+    }
+
+    /* STYLES THE NAVIGATION */
+    #hamburger-menu-icon {
+        /* Hamburger menu gets hidden */
+        display: none;
+    }
+
+    .hamburger-line {
+        /* Hamburger menu gets hidden */
+        display: none;
+    }
+
+    /*CHANGES THE COLOR OF THE NAVIGATION LINKS WHEN HOVERING*/
+}
+
+/** TABLET END **/
+
+@media (min-width: 1024px) {
+    /*** PC SCREEN ***/
+    /* CHANGES THE FLEX-BASIS OF THE PRODUCT-BOXES TO FIT 3 IN A ROW*/
+    .nav-link {
+        display: block;
+    }
+
+    #lag-konto-btn {
+        display: block;
+        border: none;
+        padding: 0.8rem;
+        background-color: #F6A41E;
+        border-radius: 0.3rem;
+        color: #FFF;
+        font-family: 'Open Sans', sans-serif;
+    }
+
+    #form-xs-s {
+        display: none;
+    }
+
+    #searchbar-xs-s {
+        display: none;
+    }
+
+    #form-m-l {
+        width: 100%;
+
+    }
+
+    #searchbar-m-l {
+        display: block;
+        width: 70%;
+        padding: 0.8rem 0rem;
+    }
+
+
+}
+
+/*** PC SCREEN END***/
+
+@media (min-width: 1240px) {
+    /**** BIG SCREEN *****/
+    /* CHANGES THE FLEX-BASIS OF THE PRODUCT-BOXES TO FIT 4 IN A ROW*/
+    #form-m-l {
+        width: 100%;
+    }
+
+    #searchbar-m-l {
+        display: block;
+        width: 70%;
+        padding: 0.8rem 0rem;
+    }
+}
+
+/**** BIG SCREEN END *****/
