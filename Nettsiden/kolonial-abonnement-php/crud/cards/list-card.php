@@ -3,14 +3,14 @@
         <div class="listenavn-space" style="position: absolute; width: 150px; left: 0;">
             <?= $event['liste_navn'] ?>
         </div>
-        <div class="listenavn-space" style="position: absolute; width: 50px; left: 150px;">
-            | ID: <?= $event['liste_id'] ?> |
+        <div class="listenavn-space" style="position: absolute; width: 75px; left: 150px;">
+            ID: <?= $event['liste_id'] ?>
         </div>
-        <div class="listenavn-space" style="position: absolute; width: 150px; left: 200px;">
+        <div class="listenavn-space" style="position: absolute; width: 150px; left: 225px;">
             Antall varer: <?= $event['liste_vareantall'] ?>
         </div>
-        <div class="listenavn-space" style="position: absolute; width: 200px; left: 350px;">
-            | Total pris: <?= $event['liste_pris'] ?> kr
+        <div class="listenavn-space" style="position: absolute; width: 200px; left: 375px;">
+            Total pris: <?= $event['liste_pris'] ?> kr
         </div>  
     </div>
     

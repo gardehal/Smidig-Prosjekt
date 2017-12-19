@@ -1,7 +1,7 @@
 <?php
     require 'require/connection.php';
     $statement1 = $connection->prepare('SELECT kunde_id, liste_navn, abonnement.liste_id, bestiling_id, leverings_dato, leverings_tidspunkt, intervall FROM abonnement 
-    LEFT JOIN liste ON abonnement.liste_id=liste.liste_id ORDER BY kunde_id');
+    LEFT JOIN liste ON abonnement.liste_id=liste.liste_id ORDER BY kunde_id, liste_id');
     require 'require/statement-execute-1.php';
 
     require '../HTML/header.html';
@@ -13,6 +13,7 @@
 <div id="container">
     <div id="content">
         <h1>Abonnement</h1>
+        <br>
         
         <?php
             foreach ($events1 as $event) 

@@ -2,13 +2,13 @@
     <div id="display">
         <!--- Dele opp listen i seksjoner så det ser bedre ut (css.css virker ikke) --->
         <div class="listenavn-space" style="position: absolute; width: 100px; left: 0;">
-            Kunde ID: <?= $event['kunde_id'] ?> |
+            Kunde ID: <?= $event['kunde_id'] ?>
         </div>
         <div class="listenavn-space" style="position: absolute; width: 150px; left: 100px;">
             <?= $event['liste_navn'] ?>
         </div>
         <div class="listenavn-space" style="position: absolute; width: 50px; left: 250px;">
-            | ID: <?= $event['liste_id'] ?> |
+            ID: <?= $event['liste_id'] ?>
         </div>
         <div class="listenavn-space" style="position: absolute; width: 200px; left: 300px;">
             Leveringsdato: <?= $event['leverings_dato'] ?>

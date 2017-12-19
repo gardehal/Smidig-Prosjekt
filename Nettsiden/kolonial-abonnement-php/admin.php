@@ -1,6 +1,7 @@
 <?php
     require 'require/connection.php';
-    $statement1 = $connection->prepare('SELECT * FROM abonnement ORDER BY kunde_id');
+    $statement1 = $connection->prepare('SELECT kunde_id, liste_navn, abonnement.liste_id, bestiling_id, leverings_dato, leverings_tidspunkt, intervall FROM abonnement 
+    LEFT JOIN liste ON abonnement.liste_id=liste.liste_id ORDER BY kunde_id, liste_id');
     require 'require/statement-execute-1.php';
 
     $statement2 = $connection->prepare('SELECT * FROM liste ORDER BY liste_id');
@@ -25,9 +26,9 @@
         <h2>Lag ny liste</h2>
         <form class="" action="crud/create-list.php" method="post">
             <input type="text" id="listenavn" name="listenavn" placeholder="Listenavn">
-            <input type="number" id="antall-varer" name="antall-varer" placeholder="Antall varer">
-            <input type="number" id="total-pris" name="total-pris" placeholder="Total pris">
-            <input type="number" id="vare-id" name="vare-id" placeholder="Varer">
+            <input type="number" id="antall-antall_varer" name="antall_varer" placeholder="Antall varer">
+            <input type="number" id="total-total_pris" name="total_pris" placeholder="Total pris">
+            <input type="number" id="vare_id" name="vare_id" placeholder="Varer">
             <input type="button" id="lag-liste-btn" onclick="submit();" value="Lag liste">            
         </form>
         <br>
