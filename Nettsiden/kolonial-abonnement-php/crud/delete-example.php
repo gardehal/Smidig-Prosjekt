@@ -5,5 +5,5 @@
 
     $statement1->execute();
 
-    header('Location: ../index.php');
+    header('Location: ../abonnement.php');
     exit;

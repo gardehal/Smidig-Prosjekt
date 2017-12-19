@@ -29,7 +29,7 @@
 
 <div id="container">
     <div id="content">
-        <h1> Viser resultater for <?= $getsearch ?> </h1>
+        <h1> Viser søkeresultater for "<?= $getsearch ?>" </h1>
         <br>
         
         <h2>Abonnement</h2>

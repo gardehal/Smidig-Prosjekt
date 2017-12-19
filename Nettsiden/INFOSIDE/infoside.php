@@ -1,4 +1,8 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
+
+<?php
+    require "../HTML/header.html";
+?>
 <html>
 
 <head>
@@ -43,7 +47,7 @@
                 <h3 id="subscription-title" class="info-txt">Ved å abonnere på dagligvarer du bruker regelmessing, trenger du aldri mer å bekymre deg for å glemme viktige varer!</h3>
                 <p id="subscription-info" class="info-txt">Dette kan for eksempel være bleier, vaskemiddel, smør eller melk. <br><br>Du kan selv velge hvilke varer du vil abonnere på, hvor ofte og hvor mye. Det er ingen bindingstid og du kan avslutte abonnementet når som helst.<br><br>Abonnement kan oppretter i Dine lister.</p>
 
-                <input class="btn" id="btn-info-til-liste" type="button" value="Gå til dine lister">
+                <input class="btn" id="btn-info-til-liste" type="button" onclick="location.href='../kolonial-abonnement-php/abonnement.php';" value="Gå til dine lister">
             </div>
 
 
