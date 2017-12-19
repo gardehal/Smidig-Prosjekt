@@ -1,4 +1,14 @@
 TODO:
-- Linke lister til abonnement -formatere dato og enum riktig i SQL query
 - Bedre CCS rundt dropdown meny?
+    Klikke utenfor dropdown = lukk/gjem
+    Kun en dropdown-content div kan vises om gangen
+    
 - Bedre CSS generelt
+    Noe CSS ligger i HTML/PHP fordi css.css ikke virker
+    
+- Enum dagen dato
+    <!--- <input type="date" id="leveringsdato" name="leveringsdato" value="<?= //$event['leverings_dato'] ?>"> --->
+    Lørdag, søndag + tider (velg dag først, leveringstoder endres ut ifra det)
+    
+- Full filepath fra forsiden til liste til kjøp?
+    Forside -> Infoside -> Lister -> ? -> Bestill?

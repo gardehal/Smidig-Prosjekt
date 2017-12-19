@@ -1,26 +1,32 @@
 <div id="card">
     <div id="display">
-        <p>
-            Kunde ID: <?= $event['kunde_id'] ?> |
-            <?= $event['liste_navn'] ?>, ID: <?= $event['liste_id'] ?> |
+        <!--- Dele opp listen i seksjoner så det ser bedre ut (css.css virker ikke) --->
+        <div class="listenavn-space" style="position: absolute; width: 100px; left: 0;">
+            Kunde ID: <?= $event['kunde_id'] ?>
+        </div>
+        <div class="listenavn-space" style="position: absolute; width: 150px; left: 100px;">
+            <?= $event['liste_navn'] ?>
+        </div>
+        <div class="listenavn-space" style="position: absolute; width: 50px; left: 250px;">
+            ID: <?= $event['liste_id'] ?>
+        </div>
+        <div class="listenavn-space" style="position: absolute; width: 200px; left: 300px;">
             Leveringsdato: <?= $event['leverings_dato'] ?>
-        </p>
+        </div>
+        <!---
+        Kunde ID: <?= $event['kunde_id'] ?> |
+        <?= $event['liste_navn'] ?> ID: <?= $event['liste_id'] ?> |
+        Leveringsdato: <?= $event['leverings_dato'] ?>
+        --->
     </div>
     
     <div id="select" style="position: absolute; width: 30%; top: -5px;">
-        <!--- Slett abonnement --->
-        <form class="card-form" action="crud/delete-subscription.php" method="post" style="position: absolute; top: 5px; z-index: 3;">
-            <input type="button" id="delete-btn" onclick="submit();" value="Slett">
-            <input type="hidden" name="slett_kunde_id" value="<?= $event['kunde_id'] ?>">
-            <input type="hidden" name="slett_liste_id" value="<?= $event['liste_id'] ?>">
-        </form>
-        
         <form class="card-form" action="crud/update-subscription.php?id=<?= $event['kunde_id'] ?>" method="post">
             <div id="dropdown-order">
                 <!--- Endre abonnement --->   
-                <button type="button" id="dropdown-btn" class="" onclick="toggleDropdown()" style="left: 25%;">Endre levering</button>
+                <button type="button" id="dropdown-btn" class="" onclick="toggleDropdown<?= $contentcounter ?>()" style="right: 55%;">Endre levering</button>
                 
-                <div id="dropdown-content" style="display:none; left: 25%;"> <!--- display:none virker ikke i CSS... --->
+                <div id="dropdown-content<?= $contentcounter ?>" class="dropdown-content" style="position: absolute; display: none; top: 23px; left: 25%;">
                     <!--- Dropdown tid --->
                     <select name="leveringstid">
                         <option value="<?= $event['leverings_tidspunkt'] ?>" selected><?= $event['leverings_tidspunkt'] ?></option>
@@ -39,7 +45,14 @@
                     <input type="number" id="intervall" name="intervall" value="<?= $event['intervall'] ?>">
 
                     <!--- Leveringsdato --->
-                    <input type="date" id="leveringsdato" name="leveringsdato" value="<?= $event['leverings_dato'] ?>">
+                    <select name="leveringsdato">
+                        <option selected disabled>Leveringsdag</option>
+                        <option value="2017-12-04">Mandag</option>
+                        <option value="2017-12-05">Tirsdag</option>
+                        <option value="2017-12-06">Onsdag</option>
+                        <option value="2017-12-07">Torsdag</option>
+                        <option value="2017-12-08">Fredag</option>
+                    </select>
                     
                     <!--- Oppdater dato etc. --->
                     <button type="button" id="update-list-btn" onclick="submit();">Oppdater</button>
@@ -47,19 +60,26 @@
             </div>
                 
             <!--- Kjøp listen (burde gå til Handlekurv) --->
-            <button type="button" id="buy-list-btn">Kjøp listen</button>
+            <button type="button" id="buy-list-btn" style="right: 20%;">Kjøp listen</button>
 
             <!--- Id-er ---> 
             <input type="hidden" name="edit_kunde_id" value="<?= $event['kunde_id'] ?>"> 
             <input type="hidden" name="edit_liste_id" value="<?= $event['liste_id'] ?>">
         </form>
+        
+        <!--- Slett abonnement --->
+        <form class="card-form" action="crud/delete-subscription.php" method="post" style="position: absolute; right: 0;">
+            <input type="button" id="delete-btn" onclick="submit();" value="Slett">
+            <input type="hidden" name="slett_kunde_id" value="<?= $event['kunde_id'] ?>">
+            <input type="hidden" name="slett_liste_id" value="<?= $event['liste_id'] ?>">
+        </form>
     </div>
 </div>
 
 <script>
-    function toggleDropdown() //ser ikke ut til å reagere på riktig element, ID burde ikke virke, men kanskje class gjør. Elementer utenfra som contentcounter (se index.php) henter bare det siste elementet. Prøve array?
-        {
-            var x = document.getElementById("dropdown-content");
+    function toggleDropdown<?= $contentcounter ?>() //ser ikke ut til å reagere på riktig element, ID burde ikke virke, men kanskje class gjør. Elementer utenfra som contentcounter (se index.php) henter bare det siste elementet. Prøve array?
+        {            
+            var x = document.getElementById("dropdown-content<?= $contentcounter ?>");
             if (x.style.display === "none") 
             {
                 x.style.display = "block";

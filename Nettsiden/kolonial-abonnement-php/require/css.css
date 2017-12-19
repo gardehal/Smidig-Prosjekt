@@ -33,12 +33,15 @@
     position: absolute;
 }
 
+.listenavn-space
+{
+}
+
 #select
 {
     position: absolute;
     right: 0;
     width: 50%;
-    background-color: red;
 }
 
 #intervall, #leveringstid, #leveringsdato
@@ -52,10 +55,9 @@
     left: 0;
 }
 
-#dropdown-content, .dropdown-content
+.dropdown-content
 {
-    position: absolute;
-    top: 25;
+    position: relative;
     left: 25%;
     height: 100px;
     width: 90px;
@@ -67,6 +69,7 @@
 #delete-btn
 {
     position: absolute;
+    right: 0;
 }
 
 #dropdown-btn
@@ -82,7 +85,6 @@
 #buy-list-btn
 {
     position: absolute;
-    right: 0;
 }
 
 /*----- Card End -----*/

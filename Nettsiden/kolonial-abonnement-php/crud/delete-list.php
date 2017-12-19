@@ -5,5 +5,5 @@
 
     $statement1->execute();
 
-    header('Location: ../admin.php');
+    header('Location: ../index.php');
     exit;

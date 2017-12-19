@@ -19,5 +19,5 @@
     WHERE kunde_id = "'.$kundeid.'" AND liste_id = "'.$listeid.'"');
     $statement1->execute();
 
-    header('Location: ../index.php');
+    header('Location: ../abonnement.php');
     exit;
