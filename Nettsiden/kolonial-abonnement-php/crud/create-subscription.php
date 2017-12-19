@@ -1,7 +1,5 @@
 <?php
     require '../require/connection.php';
-    date_default_timezone_set('Europe/Oslo');
-    $date = date('Y-m-d H:i:s', time());
 
     //Scrubbe og restriksjoner
     $kundeid = filter_var($_POST['create_kunde_id'], FILTER_SANITIZE_STRING);
@@ -14,13 +12,13 @@
         exit;
     }
 
-    //SQL Dateformat yyyy/mm/dd
+    //SQL Dateformat yyyy/mm/dd 
     $statement1 = $connection->prepare('INSERT INTO abonnement VALUES (
     "'.$kundeid.'",
     "'.$listeid.'",
     NULL,
-    "'.$_POST['create-leveringstid'].'", 
-    "'.$_POST['create-leveringsdato'].'", 
+    "'.$_POST['create_leveringsdato'].'", 
+    "'.$_POST['create_leveringstid'].'", 
     "'.$intervall.'")');
     $statement1->execute();
 

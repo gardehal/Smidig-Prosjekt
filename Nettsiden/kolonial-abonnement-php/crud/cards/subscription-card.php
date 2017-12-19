@@ -2,14 +2,14 @@
     <div id="display">
         <p>
             Kunde ID: <?= $event['kunde_id'] ?> |
-            <?= $event['liste_navn'] ?>, ID: <?= $event['liste_id'] ?> |
+            <?= $event['liste_navn'] ?> ID: <?= $event['liste_id'] ?> |
             Leveringsdato: <?= $event['leverings_dato'] ?>
         </p>
     </div>
     
     <div id="select" style="position: absolute; width: 30%; top: -5px;">
         <!--- Slett abonnement --->
-        <form class="card-form" action="crud/delete-subscription.php" method="post" style="position: absolute; top: 5px; z-index: 3;">
+        <form class="card-form" action="crud/delete-subscription.php" method="post" style="position: absolute;">
             <input type="button" id="delete-btn" onclick="submit();" value="Slett">
             <input type="hidden" name="slett_kunde_id" value="<?= $event['kunde_id'] ?>">
             <input type="hidden" name="slett_liste_id" value="<?= $event['liste_id'] ?>">

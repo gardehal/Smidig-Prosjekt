@@ -1,4 +1,5 @@
 TODO:
-- Linke lister til abonnement -formatere dato og enum riktig i SQL query
 - Bedre CCS rundt dropdown meny?
 - Bedre CSS generelt
+- Knappeproblemet JavaScript:
+    Knappen som viser dropdown menyen for å endre dato/tid for levering virker ikke helt som planlagt, den påvirker første element som blir lagt ut, eller hvis man setter en php-verdi (som $contentcoutner) på slutten bruker den siste element.

@@ -34,37 +34,29 @@
         
         <h2>Legg til abonnement</h2>
         <form class="" action="crud/create-subscription.php" method="post">
-            
             <input type="number" id="kunde-id" name="create_kunde_id" placeholder="Kunde ID">
             <input type="number" id="liste-id" name="create_liste_id" placeholder="Liste ID">
             
-            <div id="dropdown-order">
-                <button type="button" id="dropdown-admin-btn" class="" onclick="toggleDropdownAdmin()">Endre levering</button>
-                
-                <div id="dropdown-content-admin" class="dropdown-content" style="display: none;"> <!--- display:none virker ikke i CSS... --->
-                    <!--- Dropdown tid --->
-                    <select name="create-leveringstid">
-                        <option selected disabled>Tidspunkt</option>
-                        <option value="07-09">07-09</option>
-                        <option value="08-10">08-10</option>
-                        <option value="08-11">08-11</option>
-                        <option value="09-10">09-10</option>
-                        <option value="09-11">09-11</option>
-                        <option value="09-12">09-12</option>
-                        <option value="09-14">09-14</option>
-                        <option value="14-16">14-16</option>
-                        <option value="16-19">16-19</option>
-                    </select>
+            <!--- Dropdown tid --->
+            <select name="create_leveringstid">
+                <option value="07-09">07-09</option>
+                <option value="08-10">08-10</option>
+                <option value="08-11">08-11</option>
+                <option value="09-10">09-10</option>
+                <option value="09-11">09-11</option>
+                <option value="09-12">09-12</option>
+                <option value="09-14">09-14</option>
+                <option value="14-16">14-16</option>
+                <option value="16-19">16-19</option>
+            </select>
 
-                    <!--- Intervall --->
-                    <input type="number" id="intervall" name="create_intervall" value="Intervall i uker">
+            <!--- Intervall --->
+            <input type="number" id="intervall" name="create_intervall" value="Intervall i uker">
 
-                    <!--- Leveringsdato --->
-                    <input type="date" id="create-leveringsdato" name="leveringsdato" value="">
-                </div>
-            </div>
+            <!--- Leveringsdato --->
+            <input type="date" id="leveringsdato" name="create_leveringsdato" value="">
                 
-            <button type="button" onclick="submit();" style="position: relative; top: 10px;">Legg til abonnement</button>
+            <button type="button" onclick="submit();">Legg til abonnement</button>
         </form>
         
         <br>
@@ -102,21 +94,6 @@
         
     </div>
 </div>
-
-<script>
-    function toggleDropdownAdmin() //ser ikke ut til å reagere på riktig element, ID burde ikke virke, men kanskje class gjør. Elementer utenfra som contentcounter (se index.php) henter bare det siste elementet. Prøve array?
-        {
-            var x = document.getElementById("dropdown-content-admin");
-            if (x.style.display === "none") 
-            {
-                x.style.display = "block";
-            } 
-            else 
-            {
-                x.style.display = "none";
-            }
-        }
-</script>
 
 <?php
     //require 'footer.php';
