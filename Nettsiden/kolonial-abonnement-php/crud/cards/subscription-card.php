@@ -18,9 +18,9 @@
         <form class="card-form" action="crud/update-subscription.php?id=<?= $event['kunde_id'] ?>" method="post">
             <div id="dropdown-order">
                 <!--- Endre abonnement --->   
-                <button type="button" id="dropdown-btn" class="" onclick="toggleDropdown()" style="left: 25%;">Endre levering</button>
+                <button type="button" id="dropdown-btn" class="" onclick="toggleDropdown<?= $contentcounter ?>()" style="left: 25%;">Endre levering</button>
                 
-                <div id="dropdown-content" style="display:none; left: 25%;"> <!--- display:none virker ikke i CSS... --->
+                <div id="dropdown-content<?= $contentcounter ?>" class="dropdown-content" style="position: absolute; display: none; top: 23px; left: 25%;">
                     <!--- Dropdown tid --->
                     <select name="leveringstid">
                         <option value="<?= $event['leverings_tidspunkt'] ?>" selected><?= $event['leverings_tidspunkt'] ?></option>
@@ -57,9 +57,9 @@
 </div>
 
 <script>
-    function toggleDropdown() //ser ikke ut til å reagere på riktig element, ID burde ikke virke, men kanskje class gjør. Elementer utenfra som contentcounter (se index.php) henter bare det siste elementet. Prøve array?
-        {
-            var x = document.getElementById("dropdown-content");
+    function toggleDropdown<?= $contentcounter ?>() //ser ikke ut til å reagere på riktig element, ID burde ikke virke, men kanskje class gjør. Elementer utenfra som contentcounter (se index.php) henter bare det siste elementet. Prøve array?
+        {            
+            var x = document.getElementById("dropdown-content<?= $contentcounter ?>");
             if (x.style.display === "none") 
             {
                 x.style.display = "block";

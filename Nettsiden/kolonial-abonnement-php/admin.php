@@ -62,16 +62,16 @@
         <br>
         <hr>
         
-         <h2>Abonnement</h2>
+        <h2>Abonnement</h2>
         <br>
         <?php
             foreach ($events1 as $event) 
             {   
                 require 'crud/cards/subscription-card.php';
                 echo "<br><br>";
-                $searchcounter++;
+                $contentcounter++;
             } 
-            if($searchcounter == 0)
+            if($contentcounter == 0)
             {
                 echo "Beklager! Vi fant ingen abonnement med $getsearch!";
             }
@@ -79,14 +79,15 @@
         <hr>
         
         <h2>Lister</h2>
+        <br>
         <?php
             foreach ($events2 as $event) 
             {   
                 require 'crud/cards/list-card.php';
                 echo "<br><br>";
-                $searchcounter++;
+                $contentcounter++;
             } 
-            if($searchcounter == 0)
+            if($contentcounter == 0)
             {
                 echo "Beklager! Vi fant ingen lister med $getsearch!";
             }

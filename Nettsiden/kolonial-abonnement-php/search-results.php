@@ -29,9 +29,9 @@
             {   
                 require 'crud/cards/subscription-card.php';
                 echo "<br><br>";
-                $searchcounter++;
+                $contentcounter++;
             } 
-            if($searchcounter == 0)
+            if($contentcounter == 0)
             {
                 echo "Beklager! Vi fant ingen abonnement med $getsearch!";
             }
@@ -44,9 +44,9 @@
             {   
                 require 'crud/cards/list-card.php';
                 echo "<br><br>";
-                $searchcounter++;
+                $contentcounter++;
             } 
-            if($searchcounter == 0)
+            if($contentcounter == 0)
             {
                 echo "Beklager! Vi fant ingen lister med $getsearch!";
             }

@@ -51,10 +51,9 @@
     left: 0;
 }
 
-#dropdown-content, .dropdown-content
+.dropdown-content
 {
-    position: absolute;
-    top: 25;
+    position: relative;
     left: 25%;
     height: 100px;
     width: 90px;
