@@ -57,9 +57,9 @@
             {   
                 require 'crud/cards/list-card.php';
                 echo "<br><br>";
-                $contentcounter++;
+                $listcontentcounter++;
             } 
-            if($contentcounter == 0)
+            if($listcontentcounter == 0)
             {
                 echo "Beklager! Vi fant ingen lister med $getsearch!";
             }

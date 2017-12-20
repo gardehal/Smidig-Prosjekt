@@ -95,16 +95,16 @@
 </div>
 
 <script>
-    function toggleDropdown<?= $contentcounter ?>() //ser ikke ut til å reagere på riktig element, ID burde ikke virke, men kanskje class gjør. Elementer utenfra som contentcounter (se index.php) henter bare det siste elementet. Prøve array?
-        {            
-            var x = document.getElementById("dropdown-content<?= $contentcounter ?>");
-            if (x.style.display === "none") 
-            {
-                x.style.display = "block";
-            } 
-            else 
-            {
-                x.style.display = "none";
-            }
+    function toggleDropdown<?= $contentcounter ?>()
+    {            
+        var x = document.getElementById("dropdown-content<?= $contentcounter ?>");
+        if (x.style.display === "none") 
+        {
+            x.style.display = "block";
+        } 
+        else 
+        {
+            x.style.display = "none";
         }
+    }
 </script>
