@@ -7,7 +7,7 @@
         <div class="listenavn-space" style="position: absolute; width: 150px; left: 100px;">
             <?= $event['liste_navn'] ?>
         </div>
-        <div class="listenavn-space" style="position: absolute; width: 50px; left: 250px;">
+        <div class="listenavn-space" style="position: absolute; width: 75px; left: 250px;">
             ID: <?= $event['liste_id'] ?>
         </div>
         
@@ -15,7 +15,7 @@
             if($event['kunde_id'] == 0 && $event['liste_id'] == 0)
             { 
         ?>
-                <div class="listenavn-space" style="position: absolute; width: 200px; left: 300px;">
+                <div class="listenavn-space" style="position: absolute; width: 200px; left: 325px;">
                     <p style="font-weight: bold;">Leveringsdato: <?= $event['leverings_dato'] ?></p>
                 </div>
         <?php 
@@ -23,7 +23,7 @@
                else
                { 
         ?>
-                <div class="listenavn-space" style="position: absolute; width: 200px; left: 300px;">
+                <div class="listenavn-space" style="position: absolute; width: 200px; left: 325px;">
                     Leveringsdato: <?= $event['leverings_dato'] ?>
                 </div>
         <?php
@@ -44,7 +44,18 @@
                 <!--- Endre abonnement --->   
                 <button type="button" id="dropdown-btn" class="" onclick="toggleDropdown<?= $contentcounter ?>()" style="right: 55%;">Endre levering</button>
                 
-                <div id="dropdown-content<?= $contentcounter ?>" class="dropdown-content" style="position: absolute; display: none; top: 23px; right: 57.5%;">
+                <div id="dropdown-content<?= $contentcounter ?>" class="dropdown-content" style="position: absolute; display: none; top: 23px; right: 57.5%; height: 81px;">
+
+                    <!--- Leveringsdato --->
+                    <select name="leveringsdato">
+                        <option selected disabled>Leveringsdag</option>
+                        <option value="2017-12-04">Mandag</option>
+                        <option value="2017-12-05">Tirsdag</option>
+                        <option value="2017-12-06">Onsdag</option>
+                        <option value="2017-12-07">Torsdag</option>
+                        <option value="2017-12-08">Fredag</option>
+                    </select>
+                    
                     <!--- Dropdown tid --->
                     <select name="leveringstid">
                         <option value="<?= $event['leverings_tidspunkt'] ?>" selected><?= $event['leverings_tidspunkt'] ?></option>
@@ -60,17 +71,7 @@
                     </select>
 
                     <!--- Intervall --->
-                    <input type="number" id="intervall" name="intervall" value="<?= $event['intervall'] ?>">
-
-                    <!--- Leveringsdato --->
-                    <select name="leveringsdato">
-                        <option selected disabled>Leveringsdag</option>
-                        <option value="2017-12-04">Mandag</option>
-                        <option value="2017-12-05">Tirsdag</option>
-                        <option value="2017-12-06">Onsdag</option>
-                        <option value="2017-12-07">Torsdag</option>
-                        <option value="2017-12-08">Fredag</option>
-                    </select>
+                    <input type="number" id="intervall" name="intervall" value="<?= $event['intervall'] ?>" style="width: 50px;">
                     
                     <!--- Oppdater dato etc. --->
                     <button type="button" id="update-list-btn" onclick="submit();">Oppdater</button>
