@@ -1,6 +1,7 @@
 html,
 body {
     background-color: #FFF;
+    margin-bottom: 2rem;
 }
 
 /* STYLING OF LINKS */
@@ -134,7 +135,7 @@ a {
         box-sizing: border-box;
         display: flex;
         flex-basis: 100%;
-        background-image: url(../images/banner-img.jpg);
+        background-image: url(../images/banner-img2.png);
         background-size: cover;
         padding: 10rem 0rem;
         margin-bottom: 1rem;
@@ -147,10 +148,13 @@ a {
         color: white;
         text-align: center;
         font-family: 'Open Sans', sans-serif;
+        text-shadow: 1px 1px 1px black;
+
     }
 
     #banner-txt {
         font-size: 5rem;
+
     }
 
 

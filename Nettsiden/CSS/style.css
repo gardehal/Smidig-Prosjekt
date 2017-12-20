@@ -89,6 +89,10 @@ a {
 
 @media (min-width: 500px) {
     /* TABLET VERSION */
+
+#form-xs-s {
+    margin: 1rem 0.5rem;
+}
     .icons {
         display: block;
         height: 2.5rem;

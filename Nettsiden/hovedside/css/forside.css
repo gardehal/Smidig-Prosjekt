@@ -58,6 +58,7 @@ a {
     /* TABLET VERSION */
     /* MAKES THE BANNER-IMAGE RESPOSIVE */
     #banner-wrapper {
+margin-top: 1rem;
         display: block;
         margin-bottom: 2rem;
     }
