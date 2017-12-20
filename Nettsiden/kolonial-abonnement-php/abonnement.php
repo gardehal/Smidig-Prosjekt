@@ -4,7 +4,8 @@
     LEFT JOIN liste ON abonnement.liste_id=liste.liste_id ORDER BY kunde_id, liste_id');
     require 'require/statement-execute-1.php';
 
-    require '../HTML/header.html';
+    //require '../HTML/header.html';
+    require '../header-vilde/header.html';
 ?>
 
 <!--- PHP CSS (kan inkluderes i en header) --->

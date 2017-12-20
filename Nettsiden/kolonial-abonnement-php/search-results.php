@@ -21,7 +21,8 @@
     ORDER BY liste_id DESC');
     require 'require/statement-execute-2.php';
 
-    require '../HTML/header.html';
+    //require '../HTML/header.html';
+    require '../header-vilde/header.html';
 ?>
 
 <!--- PHP CSS (kan inkluderes i en header) --->
