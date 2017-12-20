@@ -89,8 +89,6 @@ a {
 
 @media (min-width: 500px) {
     /* TABLET VERSION */
-    /* MAKES THE BANNER FLOAT ALL THE WAY UP TO THE NAVIGATION BAR */
-    /* DISPLAYS THE NAVIGATION */
     .icons {
         display: block;
         height: 2.5rem;
@@ -147,6 +145,7 @@ a {
         border-radius: 0.3rem;
         color: #FFF;
         font-family: 'Open Sans', sans-serif;
+	cursor: pointer;
     }
 
     #form-xs-s {
@@ -168,6 +167,11 @@ a {
         padding: 0.8rem 0rem;
         text-align: center;
     }
+
+#lag-konto-btn:hover {
+    background-color: #f19500;
+    transition: all 0.1s ease-in-out;
+}
 
 
 }
