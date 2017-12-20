@@ -7,10 +7,10 @@ TODO:
     Noe CSS ligger i HTML/PHP fordi css.css ikke virker
     
 - Enum dagen dato
-    <!--- <input type="date" id="leveringsdato" name="leveringsdato" value="<?= //$event['leverings_dato'] ?>"> --->
+    <!--- <input type="date" id="leveringsdato" name="leveringsdato" value="<?= $event['leverings_dato'] ?>"> --->
     Lørdag, søndag + tider (velg dag først, leveringstoder endres ut ifra det)
     
 - Full filepath fra forsiden til liste til kjøp?
-    Forside -> Infoside -> Lister -> ? -> Bestill?
+    Forside -> Infoside -> Abonnement -> ? -> Bestill?
     
 - Dag på abonnement? Går ikke ann å sette spesefik dato for å bestille i fremtiden (f.eks sette opp abonnement for påskegådteri i desember)

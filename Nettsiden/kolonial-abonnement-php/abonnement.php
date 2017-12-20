@@ -4,7 +4,8 @@
     LEFT JOIN liste ON abonnement.liste_id=liste.liste_id ORDER BY kunde_id, liste_id');
     require 'require/statement-execute-1.php';
 
-    require '../HTML/header.html';
+    //require '../HTML/header.html';
+    require '../header-vilde/header.html';
 ?>
 
 <!--- PHP CSS (kan inkluderes i en header) --->
@@ -12,8 +13,13 @@
 
 <div id="container">
     <div id="content">
-        <h1>Abonnement</h1>
+        <h1 style="font-size: 30px; font-weight: bold;">Abonnement</h1>
         <br>
+        
+        <!--- Visning --->
+        <input type="button" onclick="location.href='crud/insert-example.php';" value="Nytt Eksempel">
+        <input type="button" onclick="location.href='crud/delete-example.php';" value="Slett Eksempel">
+        <br><br>
         
         <?php
             foreach ($events1 as $event) 

@@ -21,7 +21,8 @@
     ORDER BY liste_id DESC');
     require 'require/statement-execute-2.php';
 
-    require '../HTML/header.html';
+    //require '../HTML/header.html';
+    require '../header-vilde/header.html';
 ?>
 
 <!--- PHP CSS (kan inkluderes i en header) --->
@@ -29,10 +30,10 @@
 
 <div id="container">
     <div id="content">
-        <h1> Viser søkeresultater for "<?= $getsearch ?>" </h1>
+        <h1 style="font-size: 30px; font-weight: bold;"> Viser søkeresultater for "<?= $getsearch ?>" </h1>
         <br>
         
-        <h2>Abonnement</h2>
+        <h2 style="font-size: 20px; font-weight: bold;">Abonnement</h2>
         <br>
         <?php
             foreach ($events1 as $event) 
@@ -48,7 +49,7 @@
         ?>
         <hr>
         
-        <h2>Lister</h2>
+        <h2 style="font-size: 20px; font-weight: bold;">Lister</h2>
         <br>
         
         <?php
@@ -56,9 +57,9 @@
             {   
                 require 'crud/cards/list-card.php';
                 echo "<br><br>";
-                $contentcounter++;
+                $listcontentcounter++;
             } 
-            if($contentcounter == 0)
+            if($listcontentcounter == 0)
             {
                 echo "Beklager! Vi fant ingen lister med $getsearch!";
             }

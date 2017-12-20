@@ -7,7 +7,8 @@
     $statement2 = $connection->prepare('SELECT * FROM liste ORDER BY liste_id');
     require 'require/statement-execute-2.php';
 
-    require '../HTML/header.html';
+    //require '../HTML/header.html';
+    require '../header-vilde/header.html';
 ?>
 
 <!--- PHP CSS (kan inkluderes i en header) --->
@@ -15,12 +16,14 @@
 
 <div id="container">
     <div id="content">
-        <h1>Admin</h1>
+        <h1 style="font-size: 30px; font-weight: bold;">Admin</h1>
         <br>
         
         <!--- Navigering --->
-        <input type="button" onclick="location.href='abonnement.php';" value="Abonnement">
+        <input type="button" onclick="location.href='slides.php';" value="Slides">
+        <input type="button" onclick="location.href='frontpage.php';" value="Forsiden">
         <input type="button" onclick="location.href='../INFOSIDE/infoside.php';" value="Infoside">
+        <input type="button" onclick="location.href='abonnement.php';" value="Abonnement">
         <br><br>
         
         <!--- Visning --->
@@ -28,7 +31,7 @@
         <input type="button" onclick="location.href='crud/delete-example.php';" value="Slett Eksempel">
         <br><br>
         
-        <h2>Lag ny liste</h2>
+        <h2 style="font-size: 20px; font-weight: bold;">Lag ny liste</h2>
         <form class="" action="crud/create-list.php" method="post">
             <input type="text" id="listenavn" name="listenavn" placeholder="Listenavn">
             <input type="number" id="antall-antall_varer" name="antall_varer" placeholder="Antall varer">
@@ -38,7 +41,7 @@
         </form>
         <br>
         
-        <h2>Legg til abonnement</h2>
+        <h2 style="font-size: 20px; font-weight: bold;">Legg til abonnement</h2>
         <form class="" action="crud/create-subscription.php" method="post">
             <input type="number" id="kunde-id" name="create_kunde_id" placeholder="Kunde ID">
             <input type="number" id="liste-id" name="create_liste_id" placeholder="Liste ID">
@@ -75,7 +78,7 @@
         <br>
         <hr>
         
-        <h2>Abonnement</h2>
+        <h2 style="font-size: 20px; font-weight: bold;">Abonnement</h2>
         <br>
         <?php
             foreach ($events1 as $event) 
@@ -91,7 +94,7 @@
         ?>
         <hr>
         
-        <h2>Lister</h2>
+        <h2 style="font-size: 20px; font-weight: bold;">Lister</h2>
         <br>
         <?php
             foreach ($events2 as $event) 
