@@ -29,10 +29,10 @@
 
 <div id="container">
     <div id="content">
-        <h1> Viser søkeresultater for "<?= $getsearch ?>" </h1>
+        <h1 style="font-size: 30px; font-weight: bold;"> Viser søkeresultater for "<?= $getsearch ?>" </h1>
         <br>
         
-        <h2>Abonnement</h2>
+        <h2 style="font-size: 20px; font-weight: bold;">Abonnement</h2>
         <br>
         <?php
             foreach ($events1 as $event) 
@@ -48,7 +48,7 @@
         ?>
         <hr>
         
-        <h2>Lister</h2>
+        <h2 style="font-size: 20px; font-weight: bold;">Lister</h2>
         <br>
         
         <?php

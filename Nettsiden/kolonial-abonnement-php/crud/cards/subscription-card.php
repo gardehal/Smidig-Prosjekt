@@ -10,9 +10,27 @@
         <div class="listenavn-space" style="position: absolute; width: 50px; left: 250px;">
             ID: <?= $event['liste_id'] ?>
         </div>
-        <div class="listenavn-space" style="position: absolute; width: 200px; left: 300px;">
-            Leveringsdato: <?= $event['leverings_dato'] ?>
-        </div>
+        
+        <?php
+            if($event['kunde_id'] == 0 && $event['liste_id'] == 0)
+            { 
+        ?>
+                <div class="listenavn-space" style="position: absolute; width: 200px; left: 300px;">
+                    <p style="font-weight: bold;">Leveringsdato: <?= $event['leverings_dato'] ?></p>
+                </div>
+        <?php 
+               }
+               else
+               { 
+        ?>
+                <div class="listenavn-space" style="position: absolute; width: 200px; left: 300px;">
+                    Leveringsdato: <?= $event['leverings_dato'] ?>
+                </div>
+        <?php
+               }
+        ?>
+        
+        
         <!---
         Kunde ID: <?= $event['kunde_id'] ?> |
         <?= $event['liste_navn'] ?> ID: <?= $event['liste_id'] ?> |

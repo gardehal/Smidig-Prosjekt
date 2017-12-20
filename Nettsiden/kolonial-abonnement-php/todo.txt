@@ -14,3 +14,5 @@ TODO:
     Forside -> Infoside -> Lister -> ? -> Bestill?
     
 - Dag på abonnement? Går ikke ann å sette spesefik dato for å bestille i fremtiden (f.eks sette opp abonnement for påskegådteri i desember)
+
+- "Slides" med navn, litt info

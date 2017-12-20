@@ -12,8 +12,13 @@
 
 <div id="container">
     <div id="content">
-        <h1>Abonnement</h1>
+        <h1 style="font-size: 30px; font-weight: bold;">Abonnement</h1>
         <br>
+        
+        <!--- Visning --->
+        <input type="button" onclick="location.href='crud/insert-example.php';" value="Nytt Eksempel">
+        <input type="button" onclick="location.href='crud/delete-example.php';" value="Slett Eksempel">
+        <br><br>
         
         <?php
             foreach ($events1 as $event) 
