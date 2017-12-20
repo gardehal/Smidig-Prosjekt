@@ -28,6 +28,6 @@
         <br><br>
         
         <!--- Navigering --->
-        <input type="button" onclick="location.href='frontpage.php';" value="Forsiden">
+        <input type="button" onclick="location.href='../hovedside/frontpage.php';" value="Forsiden">
     </div>
 </div>

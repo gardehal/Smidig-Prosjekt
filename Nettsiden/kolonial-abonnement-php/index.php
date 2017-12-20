@@ -21,7 +21,7 @@
         
         <!--- Navigering --->
         <input type="button" onclick="location.href='slides.php';" value="Slides">
-        <input type="button" onclick="location.href='frontpage.php';" value="Forsiden">
+        <input type="button" onclick="location.href='../hovedside/frontpage.php';" value="Forsiden">
         <input type="button" onclick="location.href='../INFOSIDE/infoside.php';" value="Infoside">
         <input type="button" onclick="location.href='abonnement.php';" value="Abonnement">
         <br><br>
