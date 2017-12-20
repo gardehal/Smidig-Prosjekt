@@ -17,6 +17,7 @@ namespace smidigProsjekt
             while (!exit)
             {
                 command = Console.ReadLine();
+                command = command.ToLower();
                 switch (command)
                 {
                     case "oppdater":
