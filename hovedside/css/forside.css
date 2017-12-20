@@ -1,0 +1,129 @@
+/* MOBIL */
+
+/* MOBIL */
+
+/* MOBIL */
+
+/* MOBIL */
+
+/* MAKES THE BANNER INVISIBLE FOR MOBILE */
+
+a {
+    cursor: pointer;
+}
+
+#banner-wrapper {
+    display: none;
+}
+
+/* MAKES THE BANNER-IMAGE RESPOSIVE */
+
+.img-responsive {
+    width: 100%;
+}
+
+#container {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
+
+.design-box {
+    margin: 1rem;
+}
+
+.small-box {
+    flex-basis: 100%;
+    margin: 0;
+}
+
+.big-box {
+    flex-basis: 100%;
+    margin: 0;
+}
+
+#fullscreen-img {
+    display: none;
+}
+
+
+#tablet-img {
+    display: none;
+}
+
+@media (min-width: 500px) {
+    /* TABLET VERSION */
+    /* TABLET VERSION */
+    /* TABLET VERSION */
+    /* TABLET VERSION */
+    /* MAKES THE BANNER-IMAGE RESPOSIVE */
+    #banner-wrapper {
+        display: block;
+        margin-bottom: 2rem;
+    }
+
+    .design-box {
+        margin: 1rem;
+    }
+
+    .small-box {
+        flex-basis: 50%;
+    }
+
+    .big-box {
+        flex-basis: 100%;
+    }
+
+    .big-box-tablet {
+        flex-basis: 100%;
+    }
+
+    #tablet-img {
+        display: block;
+    }
+
+
+
+
+
+
+
+    /** TABLET END **/
+    @media (min-width: 1024px) {
+        /*** PC SCREEN ***/
+        /* CHANGES THE FLEX-BASIS OF THE PRODUCT-BOXES TO FIT 3 IN A ROW*/
+        #container {
+            width: 900px;
+        }
+
+        .small-box {
+            flex-basis: 25%;
+        }
+
+        .big-box {
+            flex-basis: 47.5%;
+        }
+
+        .big-box-fullscreen {
+            flex-basis: 100%;
+        }
+
+        #tablet-img {
+            display: none;
+        }
+
+        #fullscreen-img {
+            display: block;
+        }
+
+
+
+    }
+
+    /*** PC SCREEN END***/
+    @media (min-width: 1240px) {
+        /**** BIG SCREEN *****/
+        /* CHANGES THE FLEX-BASIS OF THE PRODUCT-BOXES TO FIT 4 IN A ROW*/
+    }
+
+    /**** BIG SCREEN END *****/
